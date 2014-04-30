@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Game</title>
+
+<link href="styles/RGC_styles.css" rel="stylesheet" type="text/css" media="Screen" />
+<link media="handheld,
+	only screen and (max-width: 480px),
+    only screen and (*max-device-width: 480px)"
+    href="styles/RGC_mobile.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="scripts/game.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+</head>
+
+<body onload="updateLastVisitDate(); clearFieldsAndVariables(); drawGamePage();">
+<div id="logo"><img src="images/royalGreenWoodCasino.png" alt="Royal Greenwood Casino"/></div><br />
+
+<div class="containerDiv">
+    <div class="playerInfo"><script>parseCookies();</script></div>
+
+    <div id="result"></div>
+
+    
+    <input name="txtBet" id="txtBet" type="text" value="" placeholder="Place your bets" />
+
+
+<table id="gameTable">
+<tr>
+    <td><div class="cardDivs" name="dealerCard1" src=""><img class="centerCards" id="dealerCard1" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="dealerCard2" src=""><img class="centerCards" id="dealerCard2" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="dealerCard3" src=""><img class="centerCards" id="dealerCard3" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="dealerCard4" src=""><img class="centerCards" id="dealerCard4" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="dealerCard5" src=""><img class="centerCards" id="dealerCard5" src="" alt=""/></div></td>
+</tr>
+<tr>
+    <td><div class="cardDivs" name="playerCard1" src=""><img class="centerCards" id="playerCard1" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="playerCard2" src=""><img class="centerCards" id="playerCard2" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="playerCard3" src=""><img class="centerCards" id="playerCard3" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="playerCard4" src=""><img class="centerCards" id="playerCard4" src="" alt=""/></div></td>
+    <td><div class="cardDivs" name="playerCard5" src=""><img class="centerCards" id="playerCard5" src="" alt=""/></div></td>
+</tr>
+</table><br />
+
+ <table id="gameControls">
+    <td><input name="btnDeal" id="btnDeal" type="button" value="Deal" onClick="initializeGame()"></td>
+    <td><input name="btnHit" id="btnHit" type="button" value="Hit" onClick="hitThePlayer()" disabled="false"></td>
+    <td><input name="btnStand" id="btnStand" type="button" value="Stand" onClick="stand()" disabled="false"></td>
+    <td><input name="btnDoubleDown" id="btnDoubleDown" type="button" value="Double Down" onClick="doubleDown()" disabled></td>
+</table>
+<script type="text/javascript">
+if (typeof jQuery == 'undefined') {
+    var script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js";
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+</script>
+
+</div>
+<div id="copyrightFooter"><p>Copyright&copy; Royal Greenwood Casino<br /><a href="http://cooltext.com" target="_top"><img src="http://cooltext.com/images/ct_pixel.gif"  alt="Cool Text: Logo and Graphics Generator"></a></p></div>
+</body>
+</html>

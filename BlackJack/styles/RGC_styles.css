@@ -1,0 +1,265 @@
+@charset "utf-8";
+/* CSS Document */
+
+.cardDivs {
+	width: 6em;
+	height: 8em;
+	background-color: rgba(0,0,0,0.40);
+	position: abosulute;
+}
+
+.containerDiv {
+	position: relative;
+	background-color: #0C3;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	color: #390;
+	height: 75%;
+	width: 90%;
+	right:5%;
+	margin-right: auto;
+	margin-left: auto;
+	font-weight: bold;
+	background-color: rgba(0,0,0,0.40);
+	float: right;
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#gameControls {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#txtBet {
+	position: relative;
+	margin-right: auto;
+	margin-left: 46%;
+}
+
+#gameTable {
+	position: relative;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#fakeURL {
+	color: #3e64ff;
+    font-size: 10px;
+	text-decoration:underline;
+    cursor: pointer;
+}
+
+#greeting {
+    font-size: 15px;
+}
+
+.playerInfo {
+    background-color: #000000;
+    border-radius: 25px;
+    position: relative;
+    line-height: 23px;
+    text-align: center;
+    width: 27%;
+	bottom: 2%;
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.containerDivIntro {
+	position: relative;
+	background-color: #0C3;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	color: #FF0;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rgba(0,0,0,0.40);
+	height: auto;
+	width: 25%;
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#logoIntro {
+	margin-right: auto;
+	margin-left: auto;
+	position: relative;
+	height: 10%;
+	width: 35.6%;
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+html, body {
+	background-image:url(../images/backgroundRedFelt.gif);
+    height: 100%;
+	padding: 0;
+    margin: 0;
+	background-repeat: no-repeat;
+    overflow:hidden;
+}
+
+#indexLogo {
+	position: absolute;
+	top: 9%;
+	margin-left: -325px;
+	left: 50%;
+	
+}
+
+.skip {
+	width: 5%;
+	background-color: rgba(0,0,0,0.20);
+	text-align:center;
+	text-size: 1.5em;
+	color:#FC0
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+#logo {
+	position: relative;
+	margin-right: 32%;
+	margin-left: 32%;
+	height: 10%;
+	width: 40.8%;
+
+}
+
+#gameDiv {
+	position: relative;
+	background-color: #930;
+    height: 80%;
+    width: 98%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.textFieldFormat {
+	text-align: right;
+	color: #FF0;
+}
+
+.textBoxFormat {
+	text-align: left;
+}
+
+#copyrightFooter {
+	position: absolute;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #FF0;
+    width: 15%;
+    height: 8%;
+    left: 43%;
+    top: 87%;
+	text-align: center;
+}
+
+#copyrightFooterIntro {
+	position: relative;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 1em;
+	color: #FF0;
+	width: 25%;
+	background-color: rgba(0,0,0,0.40);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.centerText {
+	text-align: center;
+}
+
+#infoTable {
+	border-spacing: 10px;
+    border-collapse: separate;
+}
+
+#infoTableTd {
+	padding: 10px;	
+}
+
+.center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#gameHeader {
+	width: 15%;
+	background-color: rgba(0,0,0,0.50);
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.rouletteWheel {
+	position: relative;
+	top: 5%;
+	left: 33%;
+}
+
+.winnerCanvas {
+	position: relative;
+	left: 40%;
+	bottom: 1285px;	
+}
+
+.pokerChipLeft{
+	position: relative;
+	bottom:76%;
+	left: 20%;
+}
+
+.pokerChipRight{
+	position: relative;
+    left:78%;
+	bottom:1250px;
+}
+
+.hidden {
+	display:none;
+	position:relative;
+	bottom:750px;
+}
+
+.skip a {
+	color: #FC0;
+}
+
+.centerCards {
+	left: 7px;
+    position: relative;
+    top: 6%;
+}
+
+#result {
+	display: none;
+    font-size: 3em;
+    left: 40%;
+    position: absolute;
+    top: 10%;
+    width: 40%;
+}
+
+

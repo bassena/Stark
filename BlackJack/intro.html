@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Intro</title>
+<script src="scripts/intro.js" type="text/javascript"></script>
+<link href="styles/RGC_styles.css" rel="stylesheet" type="text/css"/>
+<link media="handheld,
+	only screen and (max-width: 480px),
+    only screen and (max-device-width: 480px)"
+    href="styles/RGC_mobile.css" type="text/css" rel="stylesheet"/>
+</head>
+<body onLoad="checkCookies();">
+<div id="logoIntro"><img src="images/royalGreenWoodCasino.png" width="689" height="85" alt="Royal Greenwood Casino" />
+  <br />
+</div>
+<br />
+ <div class="containerDivIntro"><p class="centerText">Please enter some information to begin</p>
+
+   <form id="infoForm" action="game.html" method="get" onSubmit="return validateFieldsSetCookies();"> <!--I do this this way because if I return validateFields() and the setCookies() setCookies will not execute. Obviously settings cookies before validating the fields is a bad idea -->
+     <table class="center" id="infoTable">
+       <tr>
+         <td id="infoTableTd"><label class="textFieldFormat" for="fname">First Name: </label></td>
+         <td id="infoTableTd"><input type="text" class="textBoxFormat" name="fname" id="fname" value="" size="15" maxlength="15" placeholder="Name"></td>
+       </tr>
+       <tr>
+         <td id="infoTableTd"><label class="textFieldFormat" for="lname">Last Name: </label></td>
+         <td id="infoTableTd"><input type="text" class="textBoxFormat" name="lname" id="lname" value="" size="15" maxlength="20" placeholder="Name"></td>
+       </tr>
+       <tr>
+         <td id="infoTableTd"><label class="textFieldFormat" for="phoneNum">Phone Number: </label></td>
+         <td id="infoTableTd"><input type="text" class="textBoxFormat" name="phoneNum" id="phoneNum" value="" size="12" maxlength="15" placeholder="###-###-###"></td>
+       </tr>
+       <tr>
+         <td id="infoTableTd"><label class="textFieldFormat" for="pCode">Postal Code: </label></td>
+         <td id="infoTableTd"><input type="text" class="textBoxFormat" name="pCode" id="pCode" value="" size="7" maxlength="7" placeholder="X1X 1X1"></td>
+       </tr>
+       <tr>
+         <td id="infoTableTd"><label class="textFieldFormat" for="initFund">Starting Money: </label></td>
+         <td id="infoTableTd"><input type="text" class="textBoxFormat" name="initFund" id="initFund" value="" size="8" maxlength="10" placeholder="5-5000"></td>
+       </tr>
+       <tr>
+         <td id="infoTableTd" class="center"><input class="centerElem" type="submit" id="infoSubmit" value="Let's Play!"></td>
+       </tr>
+     </table>
+   </form>
+</div>
+<footer id="copyrightFooterIntro">
+    <p>Copyright&copy; Royal Greenwood Casino<br /></p><a href="http://cooltext.com" target="_top"><img src="http://cooltext.com/images/ct_pixel.gif"  alt="Cool Text: Logo and Graphics Generator" /></a>
+  </footer>
+</div>
+</body>
+</html>
