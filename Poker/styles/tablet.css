@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	font:Georgia, "Times New Roman", Times, serif;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-image:url(../images/carluzfix3.png)
+}
+
+
+#BannerText {
+	font-family:Georgia, "Times New Roman", Times, serif;
+	vertical-align: middle;
+	font-size: 5.5em;
+	text-align: center;
+	color: #306;
+	background-color: #D6D6D6;
+	background-image: url(../images/goldblock.png);
+	background-repeat: repeat;
+	}
+	
+
+#container {
+	padding: 20px;
+	background-color: #FFFF99;
+	width: 35%;
+	border: 1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-msie-border-radius;10px;
+	-o-border-radius:10px;
+	border-radius:10px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#fldset {
+	background-color:#FFFF99;
+	width: 90%;
+		border: 1px solid #000;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-msie-border-radius;10px;
+	-o-border-radius:10px;
+	border-radius:10px;
+	}
+	
+.content {
+width: 100%;
+}
+
+.label {
+			
+text-align: right;
+width:200px;
+float: left;
+}
+
+
+.Textbox {
+float: left;
+}
+	
+.submit{
+text-align:right;
+width:280px;}
+	
+	
+#chips{
+left: -150px;
+padding-bottom:40px;
+padding-top:60px;
+}
+
+footer{
+	color: #FF0;
+	text-align: left;
+	position: fixed;
+	bottom: 0px;
+	display: inline;
+				
+	}
+	
+#gameName{
+	color: #FF0;
+	text-align:center;
+	font-size: 1.5em;
+	
+}
+	
+#coin{
+	top: -150px;
+	padding-left: 40px;
+	padding-rigth: 60px;
+	display: inline;
+	padding-bottom:20px;
+	padding-top:20px;
+	
+}
+
+
+#falling{
+	width: 780px;
+  text-align:center;
+  margin-left:auto;
+  margin-right:auto;
+  padding: 0px;
+  
+}
+
+
