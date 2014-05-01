@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="title" -->
+<title>Template</title>
+
+<!-- TemplateEndEditable -->
+
+<!-- TemplateBeginEditable name="css" -->
+<link href="../styles/baseLayout.css" rel="stylesheet" type="text/css">
+<!-- TemplateEndEditable -->
+<!-- Scripts/src/linking goes here -->
+<!-- TemplateBeginEditable name="scripts" -->
+
+	<!-- enter scripts here (yes this is an editable region)-->
+    
+<!-- TemplateEndEditable -->
+
+</head>
+
+<body>
+
+
+<div id="header">
+  <div id="userInfo">Content for  id "userInfo" Goes Here</div>
+  <div id="moneyDiv">MONEY</div>
+  <div id="gameSelector">select game</div>
+</div>
+<!-- TemplateBeginEditable name="content"-->
+<div id="content">put ur fuckin game here</div>
+<!-- TemplateEndEditable -->
+<div id="footer">Copywrite Stark House Casino &copy;</div>
+</body>
+</html>
