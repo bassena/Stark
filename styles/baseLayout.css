@@ -1,8 +1,9 @@
-/* NOTE:
-	The alignment and positioning is not final,
-	this is just a base overall look. You will 
-	have to modify this based on how your game
-	integrates with your page!*/
+/* *******************************************
+	NOTE: Any changes to your game's layout will
+		have to be done in a seperate CSS file
+		linked to YOUR SPECIFIC game page. NOT
+		in this css file.
+   ******************************************** */
 
 body{
 	background-image: url(../images/bg.png);
