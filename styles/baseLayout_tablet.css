@@ -1,0 +1,59 @@
+/* NOTE:
+	The alignment and positioning is not final,
+	this is just a base overall look. You will 
+	have to modify this based on how your game
+	integrates with your page!*/
+
+body {
+	background-image: url(../images/bg.png);
+	background-repeat: repeat;
+}
+
+#header {
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:7em;
+	border-bottom-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+#userInfo{
+	width:auto;
+	border: solid black thin;
+	float:left;
+}
+/* Styles for this is not final, will need to change it once
+   a decision is made regarding selection type. */
+#gameSelector{ 
+	float:right;
+	width:6em;
+	height: auto;
+	border: solid black thin;
+	margin-right:.5em;
+	margin-top:-4.4em;
+}
+
+#moneyDiv{
+	font-size:2.5em;
+	width:4em;
+	padding-top:.7em;
+	margin-left:56%;
+	margin-right: auto;
+}
+
+#content{
+	position:absolute;
+	top:7em;
+}
+
+#footer{
+	position:absolute;
+	top:94.9%;
+	width:100%;
+	height: 3em;
+	text-align: center;
+	border-top-left-radius: 25px;
+	border-top-right-radius: 25px;
+}
