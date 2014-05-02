@@ -34,9 +34,10 @@ a{
 
 #gameSelector{
 	float:right;
-	width:6.5em;
+	width:auto;
 	border: solid black thin;
-	margin-top:-4.8em;
+	margin-top:-3em;
+	margin-right: 1em;
 }
 
 #moneyDiv{

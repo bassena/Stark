@@ -14,7 +14,7 @@
 
 <link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="../styles/baseLayout_mobile.css" />
 
-
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
 <!-- TemplateEndEditable -->
 <!-- Scripts/src/linking goes here -->
 <!-- TemplateBeginEditable name="scripts" -->
@@ -32,7 +32,14 @@
   <div id="userInfo">Name: William Banks<br/>phone Number: 111-111-111<br />Postal Code: A1A 1A1<br/>Money Remaining: $5000<br/>Not William Banks? click here to change credentials</div>
 
   <div id="moneyDiv">$5000</div>
-  <div id="gameSelector">Game selector, Will be JQuery drop down box/selection of some sort</div>
+  <div id="gameSelector">
+	<h3>Select New Game</h3>
+    	<div>
+        	<ul id="games">
+        		<li><a href="">Hurro</a></li>
+            </ul>
+        </div>
+  </div>
 </div>
 <!-- TemplateBeginEditable name="content"-->
 <div id="content">put ur fuckin game here</div>

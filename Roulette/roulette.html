@@ -14,6 +14,8 @@
 <link id="mobile" href="styles/gameStylesToTablet.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 800px), only screen and (max-device-width: 800px)">
 
 <link id="mobile" href="styles/gameMobileStyles.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)">
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css">
 <!-- InstanceEndEditable -->
 <!-- Scripts/src/linking goes here -->
 <!-- InstanceBeginEditable name="scripts" -->
@@ -28,6 +30,8 @@
 </script>
 <script type="text/javascript" src="scripts/gameFunctions.js">
 </script>
+<script type="text/javascript" src="../scripts/templateScripts.js">
+</script>
     
 <!-- InstanceEndEditable -->
 
@@ -38,7 +42,14 @@
   <div id="userInfo">Name: William Banks<br/>phone Number: 111-111-111<br />Postal Code: A1A 1A1<br/>Money Remaining: $5000<br/>Not William Banks? click here to change credentials</div>
 
   <div id="moneyDiv">$5000</div>
-  <div id="gameSelector">Game selector, Will be JQuery drop down box/selection of some sort</div>
+  <div id="gameSelector">
+	<h3>Select New Game</h3>
+    	<div>
+        	<ul id="games">
+        		<li><a href="">Hurro</a></li>
+            </ul>
+        </div>
+  </div>
 </div>
 <!-- InstanceBeginEditable name="content" -->
 <div id="content">
