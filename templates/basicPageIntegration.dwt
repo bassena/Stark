@@ -8,7 +8,7 @@
 <!-- TemplateEndEditable -->
 
 <!-- TemplateBeginEditable name="css" -->
-<link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="../styles/baseLayout.css" />
+<link rel="stylesheet" href="../styles/baseLayout.css" />
 
 <link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1439px)' href='../styles/baseLayout_tablet.css' />
 
