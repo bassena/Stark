@@ -6,7 +6,12 @@
 
 body{
 	background-image: url(../images/bg.png);
-	background-repeat: repeat;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#FFF;
+}
+
+a{
+	color: #09F;
 }
 
 #header{
@@ -42,6 +47,8 @@ body{
 }
 
 #content{
+	width:100%;
+	left:0;
 	position:absolute;
 	top:7em;
 }

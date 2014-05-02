@@ -1,49 +1,37 @@
-<!DOCTYPE HTML>
-<html><!-- InstanceBegin template="/templates/basicPageIntegration.dwt" codeOutsideHTMLIsLocked="false" -->
+<!doctype html>
+<html>
 <head>
 <meta charset="utf-8">
-<!-- InstanceBeginEditable name="title" -->
-<title>Template</title>
-
-<!-- InstanceEndEditable -->
-
-<!-- InstanceBeginEditable name="css" -->
-<link href="../styles/baseLayout.css" rel="stylesheet" type="text/css">
+<title>Roulette -- Clash Casino</title>
 <link href="styles/gameStyles.css" rel="stylesheet" type="text/css">
 
 <link id="mobile" href="styles/gameStylesToTablet.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 800px), only screen and (max-device-width: 800px)">
 
 <link id="mobile" href="styles/gameMobileStyles.css" rel="stylesheet" type="text/css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)">
-<!-- InstanceEndEditable -->
-<!-- Scripts/src/linking goes here -->
-<!-- InstanceBeginEditable name="scripts" -->
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js">
 </script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js">
-</script>
 <script type="text/javascript" src="scripts/jQueryRotate.js">
+</script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js">
 </script>
 <script type="text/javascript" src="scripts/functions.js">
 </script>
 <script type="text/javascript" src="scripts/gameFunctions.js">
 </script>
-    
-<!-- InstanceEndEditable -->
 
 </head>
 
-<body>
-
-
-<div id="header">
-  <div id="userInfo">Content for  id "userInfo" Goes Here</div>
-  <div id="moneyDiv">MONEY</div>
-  <div id="gameSelector">select game</div>
-</div>
-<!-- InstanceBeginEditable name="content" -->
-<div id="content">
-	<div id="gameArea">
+<body onLoad="footerPlacement(); headerSize(); imageInit(); initCookieValues();">
+	
+    <div id="header">
+    	<span id="headSpan">Roulette</span>
+    </div>
+    <div id="casinoLogoDiv">
+    		<img id="logo" src="images/logo_blink0.png" alt="Clash Casino Logo" width="230" height="125"/>
+    </div>
+    <div id="container">
+    	<div id="gameArea">
         	
             <div id="lightBox1">
     			<img class="light" src="images/light.png" width="86" height="86"/>
@@ -374,8 +362,15 @@
                 	<input type="button" onClick="buttonSpin();" value="Spin!"/>
 			</div>
      	</div>
-</div>
-<!-- InstanceEndEditable -->
-<div id="footer">Copywrite Stark House Casino &copy;</div>
+        
+        
+        <footer>
+                <div id="personalInfo">
+                </div>
+                
+                <div id="cashAmount">
+                </div>
+        </footer>
+    </div>
 </body>
-<!-- InstanceEnd --></html>
+</html>
