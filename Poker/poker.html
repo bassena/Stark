@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html><!-- InstanceBegin template="/templates/basicPageIntegration.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8">
+<!-- InstanceBeginEditable name="title" -->
+<title>Template</title>
+
+<!-- InstanceEndEditable -->
+
+<!-- InstanceBeginEditable name="css" -->
+<link rel="stylesheet" href="../styles/baseLayout.css" />
+
+<link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1439px)' href='../styles/baseLayout_tablet.css' />
+
+<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="../styles/baseLayout_mobile.css" />
+
+
+<!-- InstanceEndEditable -->
+<!-- Scripts/src/linking goes here -->
+<!-- InstanceBeginEditable name="scripts" -->
+
+	<!-- enter scripts here (yes this is an editable region)-->
+    
+<!-- InstanceEndEditable -->
+
+</head>
+
+<body>
+<div id="header">
+  <div id="userInfo">Name: William Banks<br/>phone Number: 111-111-111<br />Postal Code: A1A 1A1<br/>Money Remaining: $5000<br/>Not William Banks? click here to change credentials</div>
+
+  <div id="moneyDiv">$5000</div>
+  <div id="gameSelector">Game selector, Will be JQuery drop down box/selection of some sort</div>
+</div>
+<!-- InstanceBeginEditable name="content" -->
+<div id="content">
+	
+<form id="buttons" action="#">
+</br><label for="betinput" id="sth">First Bet: </label>
+<input id="betinput" type="text"  size="5">
+
+<label for="betinput2" id="sth2">Second Bet: </label>
+<input id="betinput2" type="text"  size="5">
+
+<input id="btnDeal" type="button" value="Deal" onclick="dealCards();">
+			<div id="cardContainer">
+            <div id="statement" style="font-size:3em; z-index: 2; color:#FFF; background-color:#0F0;opacity:0">
+      </div>
+           
+ <div id="remMon">
+</div>
+
+
+                <img src="images/cards/b2fv.gif" alt="Card deck"  id="cardDeck"/>
+                <img src="images/cards/b2fv.gif" id="card5" onclick="swapCard('card5');"/>
+                <img src="images/cards/b2fv.gif" id="card4" onclick="swapCard('card4');"/>
+                <img src="images/cards/b2fv.gif" id="card3" onclick="swapCard('card3');"/>
+                <img src="images/cards/b2fv.gif" id="card2" onclick="swapCard('card2');"/>
+                <img src="images/cards/b2fv.gif" id="card1" onclick="swapCard('card1');"/>
+                
+        	</div>
+
+ <div id="buttonsGroup">
+            
+<input id="buttonCheck" type="button" value="Check" onclick="checkSecBet();">
+<input id="buttonTryAgain" type="button" value="TryAgain" onclick="TryAgain();">
+<input id="buttonLeave" type="button" value="Leave" onclick="leave();">
+
+<input type="hidden" id="storageMon" name="hiddentext" value="hidden">
+</div>
+</form>
+
+
+<script>
+  $( function() {
+	$('#form').css({
+		position: 'absolute',
+		top: '1em',
+		left: '-250px'
+	});
+	
+	$('#info').css({
+		backgroundColor: '#F30',
+		border: '1px solid #333',
+		padding: '0.25px'
+	});
+	$('#form').hover(function() {
+		$('#form').animate({
+		left: '0px',
+		}, 1500);
+	}, function() {
+		$('#form').animate({
+		left: '-250px',
+		}, 1500);
+	});
+	
+	$('ul.ui-widget').css({listStyle:'none'});
+	
+	});
+  
+  </script>
+
+</div>
+<!-- InstanceEndEditable -->
+<div id="footer">Copywrite Stark House Casino &copy;</div>
+</body>
+<!-- InstanceEnd --></html>
