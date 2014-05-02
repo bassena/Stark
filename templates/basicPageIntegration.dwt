@@ -20,6 +20,8 @@
 <!-- TemplateBeginEditable name="scripts" -->
 
 	<!-- enter scripts here (yes this is an editable region)-->
+    <script type="text/javascript" src="../scripts/templateScripts.js">
+	</script>
     
 <!-- TemplateEndEditable -->
 
