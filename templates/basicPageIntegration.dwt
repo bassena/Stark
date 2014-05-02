@@ -8,7 +8,13 @@
 <!-- TemplateEndEditable -->
 
 <!-- TemplateBeginEditable name="css" -->
-<link href="../styles/baseLayout.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" media="screen and (min-device-width: 1440px)" href="../styles/baseLayout.css" />
+
+<link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1439px)' href='../styles/baseLayout_tablet.css' />
+
+<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="../styles/baseLayout_mobile.css" />
+
+
 <!-- TemplateEndEditable -->
 <!-- Scripts/src/linking goes here -->
 <!-- TemplateBeginEditable name="scripts" -->
@@ -20,12 +26,11 @@
 </head>
 
 <body>
-
-
 <div id="header">
-  <div id="userInfo">Content for  id "userInfo" Goes Here</div>
-  <div id="moneyDiv">MONEY</div>
-  <div id="gameSelector">select game</div>
+  <div id="userInfo">Name: William Banks<br/>phone Number: 111-111-111<br />Postal Code: A1A 1A1<br/>Money Remaining: $5000<br/>Not William Banks? click here to change credentials</div>
+
+  <div id="moneyDiv">$5000</div>
+  <div id="gameSelector">Game selector, Will be JQuery drop down box/selection of some sort</div>
 </div>
 <!-- TemplateBeginEditable name="content"-->
 <div id="content">put ur fuckin game here</div>
