@@ -35,7 +35,6 @@ a{
 #gameSelector{
 	float:right;
 	width:auto;
-	border: solid black thin;
 	margin-top:-3em;
 	margin-right: 1em;
 }
@@ -53,6 +52,7 @@ a{
 	left:0;
 	position:absolute;
 	top:7em;
+	z-index:-1;
 }
 
 #footer{

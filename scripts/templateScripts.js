@@ -1,10 +1,9 @@
 $(document).ready(function(){
 	$('#gameSelector').accordion({
 		collapsible:true,
-		active: false,
-		animated:'bounceslide',
-		heightStyle: 'content'
+		heightStyle: 'content',
+		active: false
 	});
-	$('#gameSelector > h3').addClass('ui-corner-bottom');
 	$('#games').menu();
+	$('#gameSelector > h3').addClass('ui-corner-bottom');
 });
