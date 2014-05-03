@@ -30,6 +30,7 @@ a{
 	width:auto;
 	border: solid black thin;
 	float:left;
+	margin-left:1em;
 }
 
 #gameSelector{
