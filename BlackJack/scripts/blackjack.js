@@ -518,7 +518,7 @@ function giveDealerCard()
 
 function initializeGame() 
 {
-	if (parseInt((document.getElementById("money").innerHTML)) <= 0)
+	if (parseInt((document.getElementById("moneyDiv").innerHTML)) <= 0)
 	{
 		alert("It looks like you are out of money, skidaddle!");
         clearFieldsAndVariables();
