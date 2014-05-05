@@ -17,11 +17,12 @@
 <link href="../styles/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css">
 <!-- TemplateEndEditable -->
 <!-- Scripts/src/linking goes here -->
-<!-- TemplateBeginEditable name="scripts" -->
-
-	<!-- enter scripts here (yes this is an editable region)-->
+	
     <script type="text/javascript" src="../scripts/templateScripts.js">
 	</script>
+<!-- TemplateBeginEditable name="scripts" -->
+
+    <!-- ENTER SCRIPTS HERE (yes, this is an editable region. You may delete this comment when done with scripts.)-->
     
 <!-- TemplateEndEditable -->
 
