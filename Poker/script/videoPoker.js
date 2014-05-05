@@ -106,7 +106,7 @@ function dealCards()
 				document.getElementById('card4').src = cardImg[randomNum[3]].src;
 				document.getElementById('card5').src = cardImg[randomNum[4]].src;
 				
-				$('#card1').animate({left: -380,top:-200}, 'linear',animCard2)	
+				$('#card1').animate({left: -124,top:-312}, 'linear',animCard2)	
 				cardRemaining=5;
 				secondBet = _$('betinput2').value;
 					//totalBet= parseInt(moneyAmount) + parseInt(secondBet);

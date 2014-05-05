@@ -6,10 +6,15 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-image:url(../images/carluzfix3.png);
-
 }
-#cred{
+
+#helpLink{
+	font-size: 1em;
+	text-decoration: underline;	
+	left:0px;
+	}
+				
+/*#cred{
 	position:relative;
 	font-size: 1em;	
 	text-shadow: 0 0 10px #0F0 0 0 20px #0F0, 0 0 30px #0F0, 0 0 40px #F30, 0 0 70px #F30, 0 0 80px #F30, 0 0 100px #F30, 0 0 150px #F30;
@@ -29,12 +34,6 @@ body {
 } 
 #cred:active {color:#0000FF;}  
 
-#helpLink{
-	font-size: 1em;
-	text-decoration: underline;	
-	left:0px;
-	}
-				
 #BannerText {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 4em;
@@ -69,47 +68,15 @@ text-shadow:15px 15px 10px black, 8px -8px 13px yellow;
 	-o-border-radius:10px;
 	border-radius:10px;
 	}
-	
-.content {
-width: 100%;
-}
-
-.label {
-			
-text-align: right;
-width:200px;
-float: left;
-
-}
-
-
-.Textbox {
-float: left;
-
-}
-	
-.btnsubmit{
-	position:relative;
-	left:170px;
-}
-	
-	
-.chip{
-left: -150px;
-padding-bottom:20px;
-padding-top:60px;
-}
-#sth{color:#00F;}
-#sth2{color:#00F;}
-footer{
+	footer{
 	color: #3F0;
 	text-align: left;
 	position: fixed;
 	top: 150px;
-	display: inline;				
+	display: inline;	
+				
 	}
-	
-.coin{
+	.coin{
 	
 	padding-left: 40px;
 	padding-rigth: 60px;
@@ -119,27 +86,12 @@ footer{
 	position:absolute;
 	
 }
-
-
-#falling{
-	position:absolute;
-	top: -150px;	
-  width: 1300px;
-  text-align:center;
-  margin-left:auto;
-  margin-right:auto;
-  padding: 0px;
-  
+.chip{
+left: -150px;
+padding-bottom:20px;
+padding-top:60px;
 }
-#myCanvas{
-	width:400px;
-	margin-left:auto;
-	margin-right:auto;
-    position:absolute;
-	top:200px;
-	left:485px;
-	}
-	
+
 a{
 	width: 400px;
 	position:relative;
@@ -161,10 +113,34 @@ a:hover {
 		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #F30, 0 0 70px #F30, 0 0 80px #F30, 0 0 100px #F30, 0 0 150px #F30;
 	
 } 
-a:active {color:#0000FF;}  
-				
-		
-		
+a:active {color:#0000FF;} 
+ 	h2 {
+	position:relative;
+	text-align:center;
+	margin-top:2em;
+	font-size:2em;
+}
+*/	
+.content {
+width: 100%;
+}
+
+.label {			
+text-align: right;
+width:200px;
+float: left;
+}
+.Textbox {
+float: left;
+}	
+.btnsubmit{
+	position:relative;
+	left:170px;
+}	
+
+#sth{color:#FF0;}
+#sth2{color:#FF0;}
+	
 	#myMobile{
 display:none;}
 
@@ -174,22 +150,14 @@ display:none;}
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;}
-	
-	
+
 		#game{
 	position: relative; 
 	width: 90%; 
 	height: 350px; 
-	margin: auto;
+ 	margin: auto;	
+    }			
 	
-}
-				
-		h2 {
-	position:relative;
-	text-align:center;
-	margin-top:2em;
-	font-size:2em;
-}
 
 #buttons {
 	position:relative;
@@ -198,8 +166,6 @@ display:none;}
 	text-align:center;
 	color: #FF0;
 }
-
-
 
 .cardfields{
 	
@@ -213,7 +179,8 @@ width:5em;
 
 #cardDeck { left:220px;
 			}	
-#card1 { left: -206px;
+#card1 { left: 45px;
+top:-111px;
 	}	
 #card2 {left: -120px;
 
@@ -237,10 +204,8 @@ left: -34px;
 				
 				}
 	#buttonsGroup{position:relative;
-				top: 250px;}
+				top: 200px;}
 #remMon{
-	
-	
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 4em;
 	text-align: center;
