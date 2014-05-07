@@ -19,7 +19,8 @@
 <link href="../styles/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css">
 <!-- InstanceEndEditable -->
 <!-- Scripts/src/linking goes here -->
-	
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
     <script type="text/javascript" src="../scripts/templateScripts.js">
 	</script>
 <!-- InstanceBeginEditable name="scripts" -->
@@ -33,10 +34,10 @@
 <!-- InstanceEndEditable -->
 
 </head>
-<body>
+<body onload="initCookieValues()">
 
 <div id="header">
-  <div id="userInfo">Name: William Banks<br/>phone Number: 111-111-111<br />Postal Code: A1A 1A1<br/>Money Remaining: $5000<br/>Not William Banks? click here to change credentials</div>
+  <div id="userInfo">Name: <span id="fname"></span> <span id="lname"></span><br/>phone Number: <span id="pnum"></span><br />Postal Code: <span id="pcode"></span><br/>Money Remaining: $<span id="cash"></span><br/>Not <span id="questionCredentials"></span>? <a href="#">click here to change credentials</a></div>
 
   <div id="moneyDiv">$5000</div>
   <div id="gameSelector">

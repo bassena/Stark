@@ -85,7 +85,7 @@ function createCookie(fName, lName, pNum, pCode, startAmt){
 function updateCookieBankRoll(bRoll){
 	var futureDate = new Date();
 	futureDate.setFullYear(futureDate.getFullYear() + 1);
-	document.cookie = "bankRoll=" + encodeURIComponent(bRoll) + "; expires=" + futureDate.toUTCString();
+	document.cookie = "availableMoney=" + encodeURIComponent(bRoll) + "; expires=" + futureDate.toUTCString();
 }
 
 //Displays the user's last visit if the case may be.

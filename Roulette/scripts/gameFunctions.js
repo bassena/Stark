@@ -60,9 +60,8 @@ function formDataUsage(){
 	var personalInfo = _("personalInfo");
 	personalInfo.innerHTML += firstName + "&nbsp;" + lastName + "&nbsp;&nbsp;" + postalCode + "&nbsp;&nbsp;" + phoneNumber;
 	
-	moneyAmt = _("cashAmount");
-	moneyAmt.innerHTML = "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
-	amountID = _("amtId");
+	moneyAmt = _("cash");
+	moneyAmt.innerHTML = startingAmount;
 }//formDataUsage()
 
 function initCookieValues(){
@@ -79,19 +78,19 @@ function initCookieValues(){
 		
 		switch(nVal){
 			case "firstName":
-				firstName = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
+				fName = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
 				break;
 				
 			case "lastName":
-				lastName = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
+				lName = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
 				break;
 				
 			case "phoneNum":
-				phoneNumber = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
+				phoneNum = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
 				break;
 				
 			case "pCode":
-				postalCode = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
+				pstlCode = cookieArr[i].substring(cookieArr[i].indexOf("=")+1);
 				break;
 				
 			case "bankRoll":
@@ -145,7 +144,7 @@ function setBet(val){
 	startingAmount -= parseInt(numberBet);
 	updateCookieBankRoll(startingAmount);
 	alert("Bet placed.");
-	moneyAmt.innerHTML = "Current&nbsp;Money:&nbsp;$" + startingAmount;
+	$('#cash').html(startingAmount);
 }//validateNumberBet()
 
 function validateBetValue(betVal, elemName){

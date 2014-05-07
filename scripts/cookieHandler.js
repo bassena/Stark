@@ -16,7 +16,7 @@ function validateFieldsSetCookies()
     	    firstNameIsValid = true;
 		}
 		else{
-    	    compiledErrors = "First name - The first name must begin with a capitol letter, and not contain numbers or spaces \n";
+    	    compiledErrors = "First name - The first name must begin with a capital letter, and not contain numbers or spaces \n";
     	} // First name Validation
 
 
@@ -30,7 +30,7 @@ function validateFieldsSetCookies()
     }
     else
     {
-        compiledErrors += "Last Name - The last name must begin with a capitol, and not contain numbers or spaces\n";
+        compiledErrors += "Last Name - The last name must begin with a capital, and not contain numbers or spaces\n";
     } // Last name Validation
 
     var phoneNumber = document.getElementById("phoneNum").value;
