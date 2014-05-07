@@ -1,0 +1,44 @@
+/*******************************
+		intro.html Styles
+*******************************/
+#playerInfoTable {
+    background-color: rgba(0,0,0,0.5);
+	margin-left: auto;
+	margin-right:auto;
+	margin-top: 11%;
+    border-radius: 25px;
+}
+
+#intro-welcome {
+    font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1em;
+    text-align: center;
+    width: auto;
+}
+
+/*******************************
+	 SelectAGame.html Styles
+*******************************/
+#gameChoices {
+	margin-left: 39%;
+    margin-right: auto;
+    margin-top: 13.5%;
+    position: absolute;
+}
+
+#choices-td {
+	background-color: rgba(0, 0, 0, 0.5);
+    height: 6em;
+    width: 12em;
+}
+
+#selectAGame-chooseGame {
+	font-size: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -1em;
+    text-align: center;
+    width: auto;1
+}
