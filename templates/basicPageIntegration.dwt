@@ -48,6 +48,6 @@
 <!-- TemplateBeginEditable name="content"-->
 <div id="content">put ur fuckin game here</div>
 <!-- TemplateEndEditable -->
-<div id="footer">Copywrite Stark House Casino &copy;</div>
+<div id="footer"><div id="cw">&copy; Stark House Casino, 2014</div></div>
 </body>
 </html>
