@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- TemplateBeginEditable name="title" -->
+<title>Template</title>
+
+<!-- TemplateEndEditable -->
+
+<!-- TemplateBeginEditable name="css" -->
+<link rel="stylesheet" href="../styles/baseLayout.css" />
+<link rel="stylesheet" href="styles/index.css" />
+
+
+<link rel='stylesheet' media='screen and (min-width: 800px) and (max-width: 1439px)' href='../styles/baseLayout_tablet.css' />
+
+<link rel='stylesheet' media='screen and (min-width: 100px) and (max-width: 799px)' href="../styles/baseLayout_mobile.css" />
+
+<link href="../styles/jquery-ui-1.10.4.custom.css" rel="stylesheet" type="text/css">
+<!-- TemplateEndEditable -->
+<!-- Scripts/src/linking goes here -->
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<script src="scripts/jquery.spritely.js"></script>
+	<script src="scripts/jquery.backgroundPosition.js"></script>
+	<script src="scripts/slot.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="../scripts/templateScripts.js">
+	</script>
+<!-- TemplateBeginEditable name="scripts" -->
+
+    <!-- ENTER SCRIPTS HERE (yes, this is an editable region. You may delete this comment when done with scripts.)-->
+    
+<!-- TemplateEndEditable -->
+
+</head>
+<body onload="initCookieValues()">
+
+<div id="header">
+  <div id="userInfo">Name: <span id="fname"></span> <span id="lname"></span><br/>phone Number: <span id="pnum"></span><br />Postal Code: <span id="pcode"></span><br/>Money Remaining: $<span id="cash"></span><br/>Not <span id="questionCredentials"></span>? <a href="#">click here to change credentials</a></div>
+
+  <div id="moneyDiv">$5000</div>
+  <div id="gameSelector">
+	<h3>Select New Game</h3>
+    	<div id="innerTabs">
+        	<ul id="games">
+        		<li><a href="../Roulette/roulette.html">Roulette</a></li>
+                <li><a href="../Poker/poker.html">Poker</a></li>
+                <li><a href="../BlackJack/blackjack.html">Blackjack</a></li>
+               	<li><a href="#">Slots</a></li>
+			</ul>
+        </div>
+  </div>
+</div>
+<!-- TemplateBeginEditable name="content"-->
+<div id="content">
+	
+		<h3>Slot machine in Javascript</h3>
+		<div>
+			<div class="slot-wrapper">
+				<div id="slot1" class="slot1"></div>
+				<div id="slot2" class="slot2"></div>
+				<div id="slot3" class="slot3"></div>
+				<div class="clear"></div> <br />
+			</div>
+		<div id="result"></div>
+		<div><button id="control">Start</button></div>
+		<div id="userBox"></div>	
+		</div>
+</div>
+<!-- TemplateEndEditable -->
+<div id="footer"><div id="cw">&copy; Stark House Casino, 2014</div></div>
+</body>
+</html>
