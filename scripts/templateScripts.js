@@ -66,3 +66,28 @@ function initCookieValues(){
 	$('#questionCredentials').html(fName + ' ' +lName);
 
 }//initCookieValues()
+
+function checkGameCookies()  // checks for the existence of a cookie, if so redirects to the game page with previously entered credentials.
+{ 
+	if (!document.cookie)
+	{
+		location.href = "../intro.html";
+	} // if 
+} // checkCookies()
+
+function checkGameSelectCookies(){
+	if (!document.cookie)
+	{
+		location.href = "intro.html";
+	} // if 
+}
+
+function deleteCookie(){
+	
+	document.cookie = "firstName=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	document.cookie = "lastName=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	document.cookie = "phoneNumber=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	document.cookie = "postalCode=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	document.cookie = "availableMoney=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+	document.cookie = "lastVisit=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+}//deleteCookie()

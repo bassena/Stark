@@ -121,15 +121,6 @@ function stringToDate(visitDate){
 	return dateObj;
 }//stringToDate()
 
-function deleteCookie(fn, ln, pn, pc, sa, lv){
-	document.cookie = "firstName=" + fn + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-	document.cookie = "lastName=" + ln + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-	document.cookie = "phoneNum=" + pn + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-	document.cookie = "pCode=" + pc + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-	document.cookie = "bankRoll=" + sa + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-	document.cookie = "lastVisit=" + lv + "; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-}//deleteCookie()
-
 //Gets the single number's bet and verifies it before applying it.
 function numberBetPlacement(numVal){
 	var bet;

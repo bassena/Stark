@@ -40,10 +40,10 @@
 <!-- InstanceEndEditable -->
 
 </head>
-<body onload="initCookieValues()">
+<body onload="checkGameCookies(); initCookieValues();">
 
 <div id="header">
-  <div id="userInfo">Name: <span id="fname"></span> <span id="lname"></span><br/>phone Number: <span id="pnum"></span><br />Postal Code: <span id="pcode"></span><br/>Money Remaining: $<span id="cash"></span><br/>Not <span id="questionCredentials"></span>? <a href="#">click here to change credentials</a></div>
+  <div id="userInfo">Name: <span id="fname"></span> <span id="lname"></span><br/>phone Number: <span id="pnum"></span><br />Postal Code: <span id="pcode"></span><br/>Money Remaining: $<span id="cash"></span><br/>Not <span id="questionCredentials"></span>? <a href="" onclick="deleteCookie()">click here to change credentials</a></div>
 
   <div id="moneyDiv">$5000</div>
   <div id="gameSelector">
@@ -53,7 +53,7 @@
         		<li><a href="roulette.html">Roulette</a></li>
                 <li><a href="../Poker/poker.html">Poker</a></li>
                 <li><a href="../BlackJack/blackjack.html">Blackjack</a></li>
-               	<li><a href="#">Slots</a></li>
+               	<li><a href="../Slot/basicPageIntegration%20-%20Copy.htm">Slots</a></li>
 			</ul>
         </div>
   </div>

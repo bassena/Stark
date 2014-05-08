@@ -102,13 +102,11 @@ function validateFieldsSetCookies()
 
 }	// validateFields()
 
-function checkCookies()  // checks for the existence of a cookie, if so redirects to the game page with previously entered credentials.
-{ 
-	if (!document.cookie)
-	{
-		location.href = "intro.html";
-	} // if 
-} // checkCookies()
+function checkIfCookie(){
+	if(document.cookie){
+		location = 'selectAGame.html';
+	}
+}
 
 function setCookies() // onSubmit sets the cookies based on the input from the form in intro.html. 
 { 
