@@ -69,18 +69,17 @@
             <div id="statement" style="font-size:3em; z-index: 2; color:#FFF; background-color:#0F0;opacity:0">
       </div>
            
- <div id="remMon">
+
 </div>
-
-
+			   <div id="allCards"> 
                 <img src="images/cards/b2fv.gif" alt="Card deck"  id="cardDeck"/>
                 <img src="images/cards/b2fv.gif" id="card5" onclick="swapCard('card5');"/>
                 <img src="images/cards/b2fv.gif" id="card4" onclick="swapCard('card4');"/>
                 <img src="images/cards/b2fv.gif" id="card3" onclick="swapCard('card3');"/>
                 <img src="images/cards/b2fv.gif" id="card2" onclick="swapCard('card2');"/>
                 <img src="images/cards/b2fv.gif" id="card1" onclick="swapCard('card1');"/>
-                
-        	</div>
+                </div>
+        	
 
  <div id="buttonsGroup">
             
@@ -92,35 +91,6 @@
 </div>
 </form>
 
-
-<script>
-  $( function() {
-	$('#form').css({
-		position: 'absolute',
-		top: '1em',
-		left: '-250px'
-	});
-	
-	$('#info').css({
-		backgroundColor: '#F30',
-		border: '1px solid #333',
-		padding: '0.25px'
-	});
-	$('#form').hover(function() {
-		$('#form').animate({
-		left: '0px',
-		}, 1500);
-	}, function() {
-		$('#form').animate({
-		left: '-250px',
-		}, 1500);
-	});
-	
-	$('ul.ui-widget').css({listStyle:'none'});
-	
-	});
-  
-  </script>
 
 </div>
 <!-- InstanceEndEditable -->
