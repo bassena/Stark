@@ -19,6 +19,47 @@ var dealerHand = 0; // represents the cards in the dealers hand -- ended up not 
 var dealerTotal = 0; // tracks the dealer totals
 var checkBet = /^(([5-9]\d{0,2})|([1-4]\d{3})|(50{3}))$/;
 
+function losingMoney()
+{
+    $(document).ready(function(){
+        $("#moneyDiv").animate(
+        {
+            color: "#FF0000",
+            fontSize: "5em",
+            marginTop: ".2em",
+            
+        }, 500, function() {
+            $("#moneyDiv").animate(
+            {
+                color: "#FFFFFF",
+                fontSize: "3em",
+                marginTop: "0.5em",
+            }, 500
+                )
+        });
+    });
+}
+
+function winningMoney() 
+{
+    $(document).ready(function(){
+        $("#moneyDiv").animate(
+        {
+            color: "#5CE62E",
+            fontSize: "5em",
+            marginTop: ".2em",
+        }, 500, function() {
+            $("#moneyDiv").animate(
+            {
+                color: "#FFFFFF",
+                fontSize: "3em",
+                marginTop: "0.5em",
+            }, 500
+                )
+        });
+    });
+}
+
 
 function updateMoney() // called onUnload in game.html
 { 
@@ -499,6 +540,7 @@ function checkGameState()
     {
         // display's the youLostDiv to inform the player in a flashy way they've lost.
         writeYouLost();
+        losingMoney();
         // updates information about players money, on the page, and then updates the cookies
         money -= parseInt(betAmount);
         document.getElementById("moneyDiv").innerHTML = parseInt(money);
@@ -513,8 +555,9 @@ function checkGameState()
     {
         // display's the div on the game page which will become shown from its initial hidden state, grown, then shrunk and hidden again
         writeYouWon();
+        winningMoney();
         // updates the bank roll
-        money += parseInt(betAmount);
+        money = (parseInt(money) + parseInt(betAmount));
         document.getElementById("moneyDiv").innerHTML = parseInt(money);
 		updateMoney();
 
@@ -545,10 +588,10 @@ function stand()
 
     if (dealerTotal > 21)
     {
-        // displays the you won text when the player wins
-        writeYouWon();
-        // updates money on the page for the user, then updates the cookies
-        money += parseInt(betAmount);
+        
+        writeYouWon();   // displays the you won text when the player wins
+        winningMoney();  
+        money = (parseInt(money) + parseInt(betAmount)); // This should be done with money += parseInt(betAmount) however doing so results in an append rather than a calculation
         document.getElementById("moneyDiv").innerHTML = parseInt(money);
 		//updatemoney();
 
@@ -567,6 +610,7 @@ function stand()
     {
         // informs the player they've lost
         writeYouLost();
+        losingMoney();
         // updates bank roll on the page and in the cookies
         money -= parseInt(betAmount);
         document.getElementById("moneyDiv").innerHTML = parseInt(money);
