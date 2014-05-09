@@ -41,11 +41,13 @@ a{
 }
 
 #moneyDiv{
-	width:2.1em;
-	font-size: 3em;
+	width:2.5em;
+	font-size: 300%;
 	margin-top:0.5em;
 	margin-left:auto;
 	margin-right: auto;
+	border-radius: 20px;
+	text-align: center;
 }
 
 #content{
