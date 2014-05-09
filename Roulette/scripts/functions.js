@@ -634,12 +634,3 @@ function determineWin(spinValue){
 	$(".thirdChip").hide();
 	$(".botChip").hide();
 }//determineWin()
-
-
-function flashMoney(){
-	$("#moneyDiv").effect("highlight", 1000);
-}
-
-function redMoney(){
-	$("#moneyDiv").effect("highlight", {color: 'red'}, 1000);
-}

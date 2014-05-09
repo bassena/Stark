@@ -94,3 +94,11 @@ function deleteCookie(){
 	document.cookie = "availableMoney=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 	document.cookie = "lastVisit=; expires=Thu, 01 Jan 1970 00:00:01 GMT;";
 }//deleteCookie()
+
+function flashMoney(){
+	$("#moneyDiv").effect("highlight", 1000);
+}
+
+function redMoney(){
+	$("#moneyDiv").effect("highlight", {color: 'red'}, 1000);
+}
