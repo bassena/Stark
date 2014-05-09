@@ -105,21 +105,18 @@ function redMoney(){
 
 function losingMoney()
 {
-    $(document).ready(function(){
-        $("#moneyDiv").animate(
-        {
-            color: "#FF0000",
-            fontSize: "5em",
-            marginTop: ".2em",
-            
-        }, 500, function() {
+
+    	$(document).ready(function(){
+    	
+    		$("#moneyDiv").animate(
+        	{
+           		backgroundColor: "#FF0000", 	
+        	}, 740, function() {
             $("#moneyDiv").animate(
             {
                 color: "#FFFFFF",
-                fontSize: "3em",
-                marginTop: "0.5em",
-            }, 500
-                )
+                backgroundColor: "rgba(0,0,0,0)",
+            }, 740)
         });
     });
 }
@@ -129,16 +126,12 @@ function winningMoney()
     $(document).ready(function(){
         $("#moneyDiv").animate(
         {
-            color: "#5CE62E",
-            fontSize: "5em",
-            marginTop: ".2em",
-        }, 500, function() {
+            backgroundColor: "#5CE62E",
+        }, 740, function() {
             $("#moneyDiv").animate(
             {
-                color: "#FFFFFF",
-                fontSize: "3em",
-                marginTop: "0.5em",
-            }, 500
+                backgroundColor: "rgba(0,0,0,0)",
+            }, 740
                 )
         });
     });
