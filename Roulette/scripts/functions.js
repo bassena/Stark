@@ -11,6 +11,12 @@ var highLowBetArray = new Array();
 var colourBetArray = new Array();
 var oddEvenBetArray = new Array();
 var isNumBet = false, isCornerBet = false, isStreetBet = false, isAvenueBet = false, isThirdBet = false, isColourBet = false, isOddEvenBet = false, isHighLowBet = false;
+var _;
+var moneyAmt;
+$(document).ready(function(){
+	_ = function(id){return document.getElementById(id)}
+	moneyAmt = _("moneyDiv");
+});
 
 function imageInit(){
 	img = new Array(2);
@@ -274,7 +280,7 @@ function determineWin(spinValue){
 					alert("Number Bet:\nYou win! You correctly chose the number " + spinValue);
 					startingAmount += parseInt(numBetArray[i][1]) + parseInt(numBetArray[i][1]) * 40;
 					updateCookieBankRoll(startingAmount);
-					moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+					moneyAmt.innerHTML = startingAmount;
 					flashMoney();
 					flashLights();
 					numBetArray = new Array();
@@ -284,7 +290,7 @@ function determineWin(spinValue){
 					alert("Number Bet:\nYou win! You correctly chose the number " + spinValue);
 					startingAmount += parseInt(numBetArray[i][1]) + parseInt(numBetArray[i][1]) * 35;
 					updateCookieBankRoll(startingAmount);
-					moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+					moneyAmt.innerHTML = startingAmount;
 					flashMoney();
 					flashLights();
 					numBetArray = new Array();
@@ -295,7 +301,7 @@ function determineWin(spinValue){
 		
 		if(!won){
 			alert("Number Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			numBetArray = new Array();
 			isNumBet = false;
@@ -317,7 +323,7 @@ function determineWin(spinValue){
 					alert("Corner bet:\nYou win! The spun number was " + spinValue);
 					startingAmount += parseInt(cornerBetArray[i][1]) + parseInt(cornerBetArray[i][1]) * 8;
 					updateCookieBankRoll(startingAmount);
-					moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+					moneyAmt.innerHTML = startingAmount;
 					flashMoney();
 					flashLights();
 					cornerBetArray = new Array();
@@ -349,7 +355,7 @@ function determineWin(spinValue){
 					alert("Street bet:\nYou win! The spun number was " + spinValue);
 					startingAmount += parseInt(streetBetArray[i][1]) + parseInt(streetBetArray[i][1]) * 11;
 					updateCookieBankRoll(startingAmount);
-					moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+					moneyAmt.innerHTML = startingAmount;
 					flashMoney();
 					flashLights();
 					streetBetArray = new Array();
@@ -363,7 +369,7 @@ function determineWin(spinValue){
 		
 		if(!won){
 			alert("Street Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			streetBetArray = new Array();
 			isStreetBet = false;
@@ -381,7 +387,7 @@ function determineWin(spinValue){
 					alert("Avenue bet:\nYou win! The spun number was " + spinValue);
 					startingAmount += parseInt(avenueBetArray[i][1]) + parseInt(avenueBetArray[i][1]) * 3;
 					updateCookieBankRoll(startingAmount);
-					moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+					moneyAmt.innerHTML = startingAmount;
 					flashMoney();
 					flashLights();
 					avenueBetArray = new Array();
@@ -394,7 +400,7 @@ function determineWin(spinValue){
 		}//for(i)
 		if(!won){
 			alert("Avenue Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			avenueBetArray = new Array();
 			isAvenueBet = false;
@@ -414,7 +420,7 @@ function determineWin(spinValue){
 						alert("First third bet:\nYou win! The spun number was " + spinValue);
 						startingAmount += parseInt(oneThirdBetArray[i][1]) + parseInt(oneThirdBetArray[i][1]) * 2;
 						updateCookieBankRoll(startingAmount);
-						moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+						moneyAmt.innerHTML = startingAmount;
 						flashMoney();
 						flashLights();
 						oneThirdBetArray = new Array();
@@ -431,7 +437,7 @@ function determineWin(spinValue){
 						alert("Second third bet:\nYou win! The spun number was " + spinValue);
 						startingAmount += parseInt(oneThirdBetArray[i][1]) + parseInt(oneThirdBetArray[i][1]) * 2;
 						updateCookieBankRoll(startingAmount);
-						moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+						moneyAmt.innerHTML = startingAmount;
 						flashMoney();
 						flashLights();
 						oneThirdBetArray = new Array();
@@ -448,7 +454,7 @@ function determineWin(spinValue){
 						alert("Last third bet:\nYou win! The spun number was " + spinValue);
 						startingAmount += parseInt(oneThirdBetArray[i][1]) + parseInt(oneThirdBetArray[i][1]) * 2;
 						updateCookieBankRoll(startingAmount);
-						moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+						moneyAmt.innerHTML = startingAmount;
 						flashMoney();
 						flashLights();
 						oneThirdBetArray = new Array();
@@ -462,7 +468,7 @@ function determineWin(spinValue){
 		}//for(i)
 		if(!won){
 			alert("Last third Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			oneThirdBetArray = new Array();
 			isThirdBet = false;
@@ -481,7 +487,7 @@ function determineWin(spinValue){
 						alert("Low bet:\nYou win! The spun number was " + spinValue);
 						startingAmount += parseInt(highLowBetArray[i][1]) * 2;
 						updateCookieBankRoll(startingAmount);
-						moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+						moneyAmt.innerHTML = startingAmount;
 						flashMoney();
 						flashLights();
 						highLowBetArray = new Array();
@@ -497,7 +503,7 @@ function determineWin(spinValue){
 						alert("High bet:\nYou win! The spun number was " + spinValue);
 						startingAmount += parseInt(highLowBetArray[i][1]) * 2;
 						updateCookieBankRoll(startingAmount);
-						moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+						moneyAmt.innerHTML = startingAmount;
 						flashMoney();
 						flashLights();
 						highLowBetArray = new Array();
@@ -510,7 +516,7 @@ function determineWin(spinValue){
 		}//for(i)
 		if(!won){
 			alert("High-Low Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			highLowBetArray = new Array();
 			isHighLowBet = false;
@@ -524,6 +530,7 @@ function determineWin(spinValue){
 		var redNums = getRedNumsArray();
 		if(spinValue == 0){
 			alert("Colour Bet:\nYou lost. The spun number was 00.");
+			moneyAmt.innerHTML = startingAmount;
 			colourBetArray = new Array();
 		}else{
 			for(i = 0; i < colourBetArray.length; i++){
@@ -537,7 +544,7 @@ function determineWin(spinValue){
 								alert("Colour bet:\nYou win! The spun number was red and was " + spinValue);
 								startingAmount += parseInt(colourBetArray[i][1]) * 2;
 								updateCookieBankRoll(startingAmount);
-								moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+								moneyAmt.innerHTML = startingAmount;
 								flashMoney();
 								flashLights();
 								colourBetArray = new Array();
@@ -553,7 +560,7 @@ function determineWin(spinValue){
 								alert("Colour bet:\nYou win! The spun number was black and was " + spinValue);
 								startingAmount += parseInt(colourBetArray[i][1]) * 2;
 								updateCookieBankRoll(startingAmount);
-								moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+								moneyAmt.innerHTML = startingAmount;
 								flashMoney();
 								flashLights();
 								colourBetArray = new Array();
@@ -565,7 +572,7 @@ function determineWin(spinValue){
 			}//for(i)
 			if(!won){
 				alert("Colour Bet:\nYou lost. The spun number was " + spinValue);
-				moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+				moneyAmt.innerHTML = startingAmount;
 				redMoney();
 				colourBetArray = new Array();
 				isColourBet = false;
@@ -584,7 +591,7 @@ function determineWin(spinValue){
 						alert("Odd bet:\nYou win! The spun number was " + spinValue);
 							startingAmount += parseInt(oddEvenBetArray[i][1]) * 2;
 							updateCookieBankRoll(startingAmount);
-							moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+							moneyAmt.innerHTML = startingAmount;
 							flashMoney();
 							flashLights();
 							oddEvenBetArray = new Array();
@@ -600,7 +607,7 @@ function determineWin(spinValue){
 						alert("Even bet:\nYou win! The spun number was " + spinValue);
 							startingAmount += parseInt(oddEvenBetArray[i][1]) * 2;
 							updateCookieBankRoll(startingAmount);
-							moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+							moneyAmt.innerHTML = startingAmount;
 							flashMoney();
 							flashLights();
 							oddEvenBetArray = new Array();
@@ -613,7 +620,7 @@ function determineWin(spinValue){
 		}//for(i)
 		if(!won){
 			alert("Even Bet:\nYou lost. The spun number was " + spinValue);
-			moneyAmt.innerHTML =  "Current&nbsp;Money:&nbsp;<span id='amtId'>$" + startingAmount + "</span>";
+			moneyAmt.innerHTML = startingAmount;
 			redMoney();
 			oddEvenBetArray = new Array();
 			isOddEvenBet = false;
@@ -630,10 +637,9 @@ function determineWin(spinValue){
 
 
 function flashMoney(){
-	$("#amtId").effect("highlight", 1000);
+	$("#moneyDiv").effect("highlight", 1000);
 }
 
 function redMoney(){
-	$("#amtId").effect("explode", {pieces: 5}, 500);
-	$("#amtId").effect("highlight", {color: 'red'}, 1000);
+	$("#moneyDiv").effect("highlight", {color: 'red'}, 1000);
 }

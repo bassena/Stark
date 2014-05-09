@@ -1,4 +1,3 @@
-var _ = function(id){return document.getElementById(id)}
 var startingAmount;
 var lVisit;
 var colourBet, numberBet, cornerBet, streetBet, oddEvenBet, oneThirdBet, highLowBet;
@@ -60,7 +59,7 @@ function formDataUsage(){
 	var personalInfo = _("personalInfo");
 	personalInfo.innerHTML += firstName + "&nbsp;" + lastName + "&nbsp;&nbsp;" + postalCode + "&nbsp;&nbsp;" + phoneNumber;
 	
-	moneyAmt = _("cash");
+	moneyAmt = _("moneyDiv");
 	moneyAmt.innerHTML = startingAmount;
 }//formDataUsage()
 
