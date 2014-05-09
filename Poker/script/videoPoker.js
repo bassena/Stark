@@ -98,8 +98,7 @@ function dealCards()
 			alert("You have placed a bet of " + moneyAmount);
 			
 			    createDeck();
-				document.getElementById('remMon').innerHTML= "$" + moneyRem;
-				total();	
+			
 				document.getElementById('card1').src = cardImg[randomNum[0]].src;
 				document.getElementById('card2').src = cardImg[randomNum[1]].src;
 				document.getElementById('card3').src = cardImg[randomNum[2]].src;
@@ -112,7 +111,7 @@ function dealCards()
 					//totalBet= parseInt(moneyAmount) + parseInt(secondBet);
 					_$('betinput').value="";
 					//moneyRem=storageMon.innerHTML;
-					money.innerHTML = "$" + moneyRem;
+					
 					_$("storageMon").value = moneyRem;
 					_$("btnDeal").disabled = true;				
 			}
@@ -319,9 +318,7 @@ function handEvaluation()
 			});
 			moneyRem -= moneyAmount;		
 		}
-		moneyRem = parseInt(moneyRem) + (parseInt(moneyAmount) * multiplyer);
-		document.getElementById('remMon').innerHTML= "$" + moneyRem;		
-		total();		
+		moneyRem = parseInt(moneyRem) + (parseInt(moneyAmount) * multiplyer);			
 		var restart = resetValues();
 		var date = new Date();
 		date.setTime(date.getTime()+(365*24*60*60*1000));
@@ -330,10 +327,7 @@ function handEvaluation()
 		location.reload();
 		moneyAmount = 0;			
 }
-function total(){
-		$('#remMon').animate({height:50,width:54},"slow");;	
-		$('#remMon').animate({height:10,width:10},"slow");;
-    }	
+
 
 function checkTwoPairs() // checks to see if there is two pairs.
 {
