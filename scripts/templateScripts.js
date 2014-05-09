@@ -62,10 +62,13 @@ function initCookieValues(){
 	$('#lname').html(lName);
 	$('#pnum').html(phoneNum);
 	$('#pcode').html(pstlCode);
-	$('#cash').html(startingAmount);
+	$('#moneyDiv').html(startingAmount);
 	$('#questionCredentials').html(fName + ' ' +lName);
 
 }//initCookieValues()
+
+
+
 
 function checkGameCookies()  // checks for the existence of a cookie, if so redirects to the game page with previously entered credentials.
 { 
