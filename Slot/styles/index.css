@@ -2,16 +2,17 @@
 /* CSS Document */
 
 #form1 {
-	width: 266px;
+	width: 57%;
 	height: auto;
-	border: thick solid #006;
+	border: thin solid black;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 1.5em;
-	background-image: url(../images/background/1.gif);
-	color: #06F;
+	background-image: url(../images/background/green-pattern.gif);
+	color: white;
 	z-index: 0;
+	text-align: center;
 }
 
 .bd {
@@ -19,10 +20,12 @@
 }
 
 .slot-wrapper {
-	 border: 1px solid #000000;
-	 background-color: white;
-	 height: 231px;
-	 width: 264px;
+	border: 1px solid #000000;
+	background-color: white;
+	height: 231px;
+	width: 264px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .slot1 {
 	background:url("../images/psd/reel1.png") repeat-y; 
@@ -70,4 +73,3 @@
 .clear {
 	clear:both;
 }
-
