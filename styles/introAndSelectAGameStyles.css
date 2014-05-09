@@ -23,16 +23,43 @@
 	 SelectAGame.html Styles
 *******************************/
 #gameChoices {
-	margin-left: 39%;
+	margin-top:10%;
+	width:2em;
+	margin-left: auto;
     margin-right: auto;
-    margin-top: 13.5%;
-    position: absolute;
 }
 
-#choices-td {
+.choices-td {
 	background-color: rgba(0, 0, 0, 0.5);
+	padding-left:1em;
     height: 6em;
     width: 12em;
+}
+
+#roulette{
+	border-top-left-radius: 15px;
+}
+
+#blkjk{
+	border-bottom-left-radius: 15px;
+}
+
+#poker{
+	border-top-right-radius: 15px;
+}
+
+#slots{
+	border-bottom-right-radius: 15px;
+}
+
+#blkjk img{
+	margin-left:-0.5em;
+	margin-right:0.5em;
+}
+
+#poker img{
+	margin-left:-0.3em;
+	margin-right:0.5em;
 }
 
 #selectAGame-chooseGame {
