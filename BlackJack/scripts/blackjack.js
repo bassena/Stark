@@ -4,7 +4,7 @@
 
 // credit for the algorithm used in the shuffleDeck() function goes to Ronald Fisher and Frank Yates for the development of their Fisher-Yates Shuffle method.
 
-var getByName = function(id) {return document.getElementByName(id);}
+var getById = function(id) {return document.getElementById(id);}
 
 
 
@@ -19,89 +19,14 @@ var dealerHand = 0; // represents the cards in the dealers hand -- ended up not 
 var dealerTotal = 0; // tracks the dealer totals
 var checkBet = /^(([5-9]\d{0,2})|([1-4]\d{3})|(50{3}))$/;
 
-function updateLastVisitDate()
-{
-    var expireDate = new Date();
-        expireDate.setFullYear(expireDate.getFullYear() + 1);
-		
-    var currentTime = new Date();
-    var year = currentTime.getFullYear();
-    var monthName = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
-    var month = monthName[currentTime.getMonth()]; // variable containing the human readable version of the month from the date object converted using above array.
-    var numericDayArray = new Array(01, 02, 03, 05, 06, 07, 08, 09, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31);
-    var numericDay = numericDayArray[currentTime.getDay()];
-    var dayName = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
-    var day = dayName[currentTime.getDay()]; // variable containing the human readable version of the day from the date object converted using above array.
-    var hour = currentTime.getHours();
-    var minute = currentTime.getMinutes();
 
-    var currentVisit = "Your last visit was " + day + " " + month + " " + numericDay + ", " + year + " at " + hour + ":" + minute;
-
-    document.cookie = "lastVisit=" + encodeURIComponent(currentVisit) + "; expires=" + expireDate.toUTCString();
-
-} // updateLastVisitDate()
-
-function updateBankRoll() // called onUnload in game.html
+function updateMoney() // called onUnload in game.html
 { 
-	var expireDate = new Date();
+    var expireDate = new Date();
     expireDate.setFullYear(expireDate.getFullYear() + 1);
-	var money = parseInt(document.getElementById("money").innerHTML);
-	document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + expireDate.toUTCString();
+    document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + expireDate.toUTCString();
 } // updateBankRoll()
 
-function parseCookies() 
-{
-	
-    if(document.cookie) {
-        var cookieString  = decodeURIComponent(document.cookie);
-        var cookieArray = cookieString.split("; ");
-		
-        var firstName = cookieArray[0].substring(cookieArray[0].indexOf("=") + 1, cookieArray[0].length);
-        var lastName = cookieArray[1].substring(cookieArray[1].indexOf("=") + 1, cookieArray[1].length);
-        var postalCode = cookieArray[2].substring(cookieArray[2].indexOf("=") + 1, cookieArray[2].length);
-        var phoneNumber = cookieArray[3].substring(cookieArray[3].indexOf("=") + 1, cookieArray[3].length);
-        bankRoll = cookieArray[4].substring(cookieArray[4].indexOf("=") + 1, cookieArray[4].length);
-        var lastVisit = cookieArray[5].substring(cookieArray[5].indexOf("=") + 1, cookieArray[5].length);
-        var name = firstName + " " + lastName;
-		
-		var greeting = "<p><span id='greeting'>Welcome " + name + "</span>" + " <br />(<a id='fakeURL' onClick='changeCredentials();'>Not " + name + "? Click here to change credentials</a>)<br/>" + lastVisit + "<br />" + "Your phone number is: " + phoneNumber + "<br />" + "Your postal code is: " + postalCode + "<br />" + "<span id='animateMoney'>" + "$" + "<span id='money'>" + bankRoll + "</span>" + "</span>" + "</p>";
-        
-    	document.write(greeting);
-    	} // if(document.cookie)
-    else
-    {
-        location.href = "./intro.html";
-    }
-	
-} // parseCookie()
-
-function changeCredentials() // handles the deletion of cookies so that when redirected back to the intro page it can pass the "does cookies exist" validation
-{  
-    var deleteCookie = new Date();
-    deleteCookie.setFullYear - 500;
-
-    // creating an array from the cookie string.
-    var cookieString  = decodeURIComponent(document.cookie);
-    var cookieArray = cookieString.split("; ");
-
-    // Parsing the cookie string to extract user information
-    var firstName = cookieArray[0].substring(cookieArray[0].indexOf("=") + 1, cookieArray[0].length);
-    var lastName = cookieArray[1].substring(cookieArray[1].indexOf("=") + 1, cookieArray[1].length);
-    var postalCode = cookieArray[2].substring(cookieArray[2].indexOf("=") + 1, cookieArray[2].length);
-    var phoneNumber = cookieArray[3].substring(cookieArray[3].indexOf("=") + 1, cookieArray[3].length);
-    bankRoll = cookieArray[4].substring(cookieArray[4].indexOf("=") + 1, cookieArray[4].length);
-	var lastVisit = cookieArray[5].substring(cookieArray[5].indexOf("=") + 1, cookieArray[5].length);
-    var name = firstName + " " + lastName;
-
-    document.cookie = "firstName=" + encodeURIComponent(firstName) + "; expires=" + deleteCookie.toUTCString();
-    document.cookie = "lastName=" + encodeURIComponent(lastName) + "; expires=" + deleteCookie.toUTCString();
-    document.cookie = "postalCode=" + encodeURIComponent(postalCode) + "; expires=" + deleteCookie.toUTCString();
-    document.cookie = "phoneNumber=" + encodeURIComponent(phoneNumber) + "; expires=" + deleteCookie.toUTCString();
-    document.cookie = "availableMoney=" + encodeURIComponent(bankRoll) + "; expires=" + deleteCookie.toUTCString();
-	document.cookie = "lastVisit=" + encodeURIComponent(lastVisit) + ";expires=" +deleteCookie.toUTCString();
-
-    location.href = "./intro.html";
-} // changeCredentials()
 
 function writeYouLost() 
 {
@@ -518,6 +443,7 @@ function giveDealerCard()
 
 function initializeGame() 
 {
+    money = document.getElementById("moneyDiv").innerHTML;
 	if (parseInt((document.getElementById("moneyDiv").innerHTML)) <= 0)
 	{
 		alert("It looks like you are out of money, skidaddle!");
@@ -529,7 +455,7 @@ function initializeGame()
     	shuffleDeck(); // shuffles the deck
 
    	 	betAmount = parseInt(document.getElementById("txtBet").value);
-    	if (betAmount >= 5 && !(betAmount > bankRoll)) {
+    	if (betAmount >= 5 && !(betAmount > money)) {
         	document.getElementById("btnDeal").disabled = true;
         	document.getElementById("btnHit").disabled = false;
         	document.getElementById("btnStand").disabled = false;
@@ -574,9 +500,9 @@ function checkGameState()
         // display's the youLostDiv to inform the player in a flashy way they've lost.
         writeYouLost();
         // updates information about players money, on the page, and then updates the cookies
-        bankRoll -= parseInt(betAmount);
-        document.getElementById("money").innerHTML = bankRoll;
-		updateBankRoll();
+        money -= parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+		updateMoney();
 
         // pretty self explanitory, resets everything to its original state so a new game can be initiated
 		clearFieldsAndVariables();
@@ -588,9 +514,9 @@ function checkGameState()
         // display's the div on the game page which will become shown from its initial hidden state, grown, then shrunk and hidden again
         writeYouWon();
         // updates the bank roll
-        bankRoll += parseInt(betAmount);
-        document.getElementById("money").innerHTML = parseInt(bankRoll);
-		updateBankRoll();
+        money += parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+		updateMoney();
 
         // clears fields
 		clearFieldsAndVariables();
@@ -621,10 +547,10 @@ function stand()
     {
         // displays the you won text when the player wins
         writeYouWon();
-        // updates bankroll on the page for the user, then updates the cookies
-        bankRoll += parseInt(betAmount);
-        document.getElementById("money").innerHTML = bankRoll;
-		updateBankRoll();
+        // updates money on the page for the user, then updates the cookies
+        money += parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+		//updatemoney();
 
 		clearFieldsAndVariables();
 
@@ -642,9 +568,9 @@ function stand()
         // informs the player they've lost
         writeYouLost();
         // updates bank roll on the page and in the cookies
-        bankRoll -= parseInt(betAmount);
-        document.getElementById("money").innerHTML = bankRoll;
-		updateBankRoll();
+        money -= parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+		updateMoney();
 
 		clearFieldsAndVariables();
     } // checks if the dealer has a hand greater than the players hand, yet has not busted, if so alerts the player that they've lost
