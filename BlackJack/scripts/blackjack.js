@@ -19,46 +19,7 @@ var dealerHand = 0; // represents the cards in the dealers hand -- ended up not 
 var dealerTotal = 0; // tracks the dealer totals
 var checkBet = /^(([5-9]\d{0,2})|([1-4]\d{3})|(50{3}))$/;
 
-function losingMoney()
-{
-    $(document).ready(function(){
-        $("#moneyDiv").animate(
-        {
-            color: "#FF0000",
-            fontSize: "5em",
-            marginTop: ".2em",
-            
-        }, 500, function() {
-            $("#moneyDiv").animate(
-            {
-                color: "#FFFFFF",
-                fontSize: "3em",
-                marginTop: "0.5em",
-            }, 500
-                )
-        });
-    });
-}
 
-function winningMoney() 
-{
-    $(document).ready(function(){
-        $("#moneyDiv").animate(
-        {
-            color: "#5CE62E",
-            fontSize: "5em",
-            marginTop: ".2em",
-        }, 500, function() {
-            $("#moneyDiv").animate(
-            {
-                color: "#FFFFFF",
-                fontSize: "3em",
-                marginTop: "0.5em",
-            }, 500
-                )
-        });
-    });
-}
 
 
 function updateMoney() // called onUnload in game.html

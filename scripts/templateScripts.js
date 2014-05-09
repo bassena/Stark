@@ -102,3 +102,44 @@ function flashMoney(){
 function redMoney(){
 	$("#moneyDiv").effect("highlight", {color: 'red'}, 1000);
 }
+
+function losingMoney()
+{
+    $(document).ready(function(){
+        $("#moneyDiv").animate(
+        {
+            color: "#FF0000",
+            fontSize: "5em",
+            marginTop: ".2em",
+            
+        }, 500, function() {
+            $("#moneyDiv").animate(
+            {
+                color: "#FFFFFF",
+                fontSize: "3em",
+                marginTop: "0.5em",
+            }, 500
+                )
+        });
+    });
+}
+
+function winningMoney() 
+{
+    $(document).ready(function(){
+        $("#moneyDiv").animate(
+        {
+            color: "#5CE62E",
+            fontSize: "5em",
+            marginTop: ".2em",
+        }, 500, function() {
+            $("#moneyDiv").animate(
+            {
+                color: "#FFFFFF",
+                fontSize: "3em",
+                marginTop: "0.5em",
+            }, 500
+                )
+        });
+    });
+}
