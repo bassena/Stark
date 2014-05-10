@@ -26,7 +26,7 @@ function updateMoney() // called onUnload in game.html
 { 
     var expireDate = new Date();
     expireDate.setFullYear(expireDate.getFullYear() + 1);
-    document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + expireDate.toUTCString();
+    document.cookie = "availableMoney=" + encodeURIComponent(totalMoney) + "; expires=" + expireDate.toUTCString();
 } // updateBankRoll()
 
 
