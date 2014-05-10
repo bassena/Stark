@@ -62,7 +62,7 @@ function initCookieValues(){
 	$('#lname').html(lName);
 	$('#pnum').html(phoneNum);
 	$('#pcode').html(pstlCode);
-	$('#moneyDiv').html(startingAmount);
+	$('#moneyDiv').html('$'+startingAmount);
 	$('#questionCredentials').html(fName + ' ' +lName);
 
 }//initCookieValues()
