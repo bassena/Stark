@@ -33,7 +33,7 @@
 <div id="header">
   <div id="userInfo">Name: <span id="fname"></span> <span id="lname"></span><br/>phone Number: <span id="pnum"></span><br />Postal Code: <span id="pcode"></span><br/>Not <span id="questionCredentials"></span>? <a href="" onclick="deleteCookie()">click here to change credentials</a></div>
 
-  <div id="moneyDiv">$5000</div>
+  <div id="moneyDiv"></div>
   <div id="gameSelector">
 	<h3>Select New Game</h3>
     	<div id="innerTabs">
