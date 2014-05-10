@@ -134,7 +134,7 @@ function checkSecBet()
 		}
 		else 
 		{
-			secondBet=prompt("How much would you like to bet?");
+			secondBet = prompt("How much would you like to bet?");
 			moneyAmount= parseInt(moneyAmount) + parseInt(secondBet);
 			checkWin();	
 		}
@@ -232,7 +232,7 @@ function handEvaluation()
 	tempRemain = moneyRem;	
 		var multiplyer = 0;
 		 if (checkFlush() && checkRoyalStraight()){
-			 $("#statement").fadeIn(5000,function(){
+			 $("#statement").fadeIn(7000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Royal Flush. You won $" + moneyAmount*250);
 			});
@@ -241,7 +241,7 @@ function handEvaluation()
 		}
 		else if (checkFlush() && checkStraight())
 		{
-			 $("#statement").fadeIn(5000,function(){
+			 $("#statement").fadeIn(7000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Straight Flush. You won $" + moneyAmount*50);
 			});
@@ -250,7 +250,7 @@ function handEvaluation()
 		}
 		else if(checkFourOfaKind())
 		{
-			 $("#statement").fadeIn(5000,function(){
+			 $("#statement").fadeIn(7000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Four of a kind. You won $" + moneyAmount*25);
 			});
@@ -260,7 +260,7 @@ function handEvaluation()
 	
 	else if(checkFullhouse())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Full House! You won $" + moneyAmount*6);
 			});		
@@ -270,7 +270,7 @@ function handEvaluation()
 	
 		else if(checkFlush())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Flush. You won $" + moneyAmount*5);
 			});
@@ -278,7 +278,7 @@ function handEvaluation()
 			}
 		else if (checkStraight())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Straigh. You won $" + moneyAmount*4);
 			});
@@ -286,7 +286,7 @@ function handEvaluation()
 		}
 		else if(checkThreeOfaKind())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Three of a kind. You won $" + moneyAmount*3);
 			});
@@ -294,7 +294,7 @@ function handEvaluation()
 		}	
 		 else if (checkTwoPairs())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have two pairs. You won $" + moneyAmount*2);
 			});
@@ -302,7 +302,7 @@ function handEvaluation()
 		}
 		else if (checkSinglePair())
 		{
-			$("#statement").fadeIn(5000,function(){
+			$("#statement").fadeIn(7000,function(){
 			 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have One Pair $" + moneyAmount);
 			});
@@ -311,19 +311,20 @@ function handEvaluation()
 		}
 		else
 		{ 
-		     $("#statement").fadeIn(5000,function(){
-				 $("#statement").css("opacity","1");
+		    $("#statement").fadeIn(7000,function(){
+			$("#statement").css("opacity","1");
 			$(this).text( "Sorry! You lost $" + moneyAmount + ". Try again!");
 			$("#statement").css("background-color","#F00");
 			});
-			moneyRem -= (moneyAmount+seconBet);		
+			moneyRem -= (moneyAmount+secondBet);		
 		}
 		moneyRem = parseInt(moneyRem) + (parseInt(moneyAmount) * multiplyer);			
 		var restart = resetValues();
 		updateCookieBankRoll(moneyRem);
 		_$('betinput').value="";
 		location.reload();
-		moneyAmount = 0;			
+		moneyAmount = 0;	
+		
 }
 
 function updateCookieBankRoll(money){
@@ -331,7 +332,6 @@ function updateCookieBankRoll(money){
 	futureDate.setFullYear(futureDate.getFullYear() + 1);
 	document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + futureDate.toUTCString();
 }
-
 
 function checkTwoPairs() // checks to see if there is two pairs.
 {
