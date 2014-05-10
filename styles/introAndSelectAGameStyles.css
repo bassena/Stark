@@ -33,12 +33,12 @@
 	margin-bottom:1em;
 }
 
-#fname{
-	margin-left:2.3em;
+.Fname{
+	margin-left:2.3em !important;
 }
 
-#lname{
-	margin-left:2.5em;
+.Lname{
+	margin-left:2.5em !important;
 }
 
 #phoneNum{
