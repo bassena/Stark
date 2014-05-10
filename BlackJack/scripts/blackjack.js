@@ -446,7 +446,8 @@ function giveDealerCard()
 function initializeGame() 
 {
     money = document.getElementById("moneyDiv").innerHTML;
-	if (parseInt((document.getElementById("moneyDiv").innerHTML)) <= 0)
+    totalMoney = money.substring(1);
+	if (parseInt(totalMoney) <= 0)
 	{
 		alert("It looks like you are out of money, skidaddle!");
         clearFieldsAndVariables();
@@ -503,8 +504,8 @@ function checkGameState()
         writeYouLost();
         losingMoney();
         // updates information about players money, on the page, and then updates the cookies
-        money -= parseInt(betAmount);
-        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+        totalMoney -= parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = ("$" + (parseInt(totalMoney)));
 		updateMoney();
 
         // pretty self explanitory, resets everything to its original state so a new game can be initiated
@@ -518,8 +519,8 @@ function checkGameState()
         writeYouWon();
         winningMoney();
         // updates the bank roll
-        money = (parseInt(money) + parseInt(betAmount));
-        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+        totalMoney = (parseInt(totalMoney) + parseInt(betAmount));
+   document.getElementById("moneyDiv").innerHTML = ("$" + (parseInt(totalMoney)));
 		updateMoney();
 
         // clears fields
@@ -552,8 +553,8 @@ function stand()
         
         writeYouWon();   // displays the you won text when the player wins
         winningMoney();  
-        money = (parseInt(money) + parseInt(betAmount)); // This should be done with money += parseInt(betAmount) however doing so results in an append rather than a calculation
-        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+        totalMoney = (parseInt(totalMoney) + parseInt(betAmount)); // This should be done with money += parseInt(betAmount) however doing so results in an append rather than a calculation
+        document.getElementById("moneyDiv").innerHTML = ("$" + (parseInt(totalMoney)));
 		//updatemoney();
 
 		clearFieldsAndVariables();
@@ -573,8 +574,8 @@ function stand()
         writeYouLost();
         losingMoney();
         // updates bank roll on the page and in the cookies
-        money -= parseInt(betAmount);
-        document.getElementById("moneyDiv").innerHTML = parseInt(money);
+        totalMoney -= parseInt(betAmount);
+        document.getElementById("moneyDiv").innerHTML = ("$" + (parseInt(totalMoney)));
 		updateMoney();
 
 		clearFieldsAndVariables();
