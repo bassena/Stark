@@ -130,7 +130,8 @@ function checkSecBet()
 		
 		if(answer == false)
 		{
-			return false;
+			checkWin();	
+			
 		}
 		else 
 		{
@@ -316,8 +317,9 @@ function handEvaluation()
 			$(this).text( "Sorry! You lost $" + moneyAmount + ". Try again!");
 			$("#statement").css("background-color","#F00");
 			});
-			moneyRem -= (moneyAmount+secondBet);		
+					
 		}
+		moneyRem -= parseInt(moneyAmount);
 		moneyRem = parseInt(moneyRem) + (parseInt(moneyAmount) * multiplyer);			
 		var restart = resetValues();
 		updateCookieBankRoll(moneyRem);
@@ -566,7 +568,7 @@ function leave()
 {
  			
 	alert("You have $" +moneyRem+" remaining"); 
-    window.location.assign("http://www.cegep-heritage.qc.ca/")
+    window.location.assign("../selectAGame.html")
 
 }
 
