@@ -18,7 +18,7 @@ isswap5=false;
 cardImg = new Array(52);
 number= 0;
 cardRemaining=0;
-var moneyRem = getCookie("money");
+var moneyRem = getCookie("availableMoney");
 altimg= new Array();
 userSuit = new Array();
 userRank = new Array();
@@ -69,7 +69,6 @@ function dealCards()
 {       
 		//moneyRem="_$" + storageMon.innerHTML;
 		moneyAmount = parseInt(_$("betinput").value);
-		secondBet = parseInt(_$("betinput2").value);
 		if (moneyAmount < 0)
 		{
 			alert('The bet must be greater than zero.');
@@ -107,11 +106,10 @@ function dealCards()
 				
 				$('#card1').animate({left: -124,top:-312}, 'linear',animCard2)	
 				cardRemaining=5;
-				secondBet = _$('betinput2').value;
-					//totalBet= parseInt(moneyAmount) + parseInt(secondBet);
-					_$('betinput').value="";
-					//moneyRem=storageMon.innerHTML;
+		
 					
+					_$('betinput').value="";
+					//moneyRem=storageMon.innerHTML;			
 					_$("storageMon").value = moneyRem;
 					_$("btnDeal").disabled = true;				
 			}
@@ -127,7 +125,7 @@ function checkSecBet()
 {
 	if (secondBet ==0)
 {
-		answer=confirm("Please enter a second bet greater than $5 and lower than your first bet to play.");
+		answer=confirm("Would you like to enter a second bet?");
 		_$("btnDeal").disabled = false;
 		
 		if(answer == false)
@@ -136,6 +134,8 @@ function checkSecBet()
 		}
 		else 
 		{
+			secondBet=prompt("How much would you like to bet?");
+			moneyAmount= parseInt(moneyAmount) + parseInt(secondBet);
 			checkWin();	
 		}
 }
@@ -232,7 +232,7 @@ function handEvaluation()
 	tempRemain = moneyRem;	
 		var multiplyer = 0;
 		 if (checkFlush() && checkRoyalStraight()){
-			 $("#statement").fadeIn(3000,function(){
+			 $("#statement").fadeIn(5000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Royal Flush. You won $" + moneyAmount*250);
 			});
@@ -241,7 +241,7 @@ function handEvaluation()
 		}
 		else if (checkFlush() && checkStraight())
 		{
-			 $("#statement").fadeIn(3000,function(){
+			 $("#statement").fadeIn(5000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Straight Flush. You won $" + moneyAmount*50);
 			});
@@ -250,7 +250,7 @@ function handEvaluation()
 		}
 		else if(checkFourOfaKind())
 		{
-			 $("#statement").fadeIn(3000,function(){
+			 $("#statement").fadeIn(5000,function(){
 				  $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Four of a kind. You won $" + moneyAmount*25);
 			});
@@ -260,7 +260,7 @@ function handEvaluation()
 	
 	else if(checkFullhouse())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Full House! You won $" + moneyAmount*6);
 			});		
@@ -270,7 +270,7 @@ function handEvaluation()
 	
 		else if(checkFlush())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Flush. You won $" + moneyAmount*5);
 			});
@@ -278,7 +278,7 @@ function handEvaluation()
 			}
 		else if (checkStraight())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Straigh. You won $" + moneyAmount*4);
 			});
@@ -286,7 +286,7 @@ function handEvaluation()
 		}
 		else if(checkThreeOfaKind())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have a Three of a kind. You won $" + moneyAmount*3);
 			});
@@ -294,7 +294,7 @@ function handEvaluation()
 		}	
 		 else if (checkTwoPairs())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have two pairs. You won $" + moneyAmount*2);
 			});
@@ -302,7 +302,7 @@ function handEvaluation()
 		}
 		else if (checkSinglePair())
 		{
-			$("#statement").fadeIn(3000,function(){
+			$("#statement").fadeIn(5000,function(){
 			 $("#statement").css("opacity","1");
 			$(this).text( "Congratulations! You have One Pair $" + moneyAmount);
 			});
@@ -311,21 +311,25 @@ function handEvaluation()
 		}
 		else
 		{ 
-		     $("#statement").fadeIn(3000,function(){
+		     $("#statement").fadeIn(5000,function(){
 				 $("#statement").css("opacity","1");
-			$(this).text( "Sorry! You lost $" + moneyAmount + ". Try 	again!");
+			$(this).text( "Sorry! You lost $" + moneyAmount + ". Try again!");
 			$("#statement").css("background-color","#F00");
 			});
-			moneyRem -= moneyAmount;		
+			moneyRem -= (moneyAmount+seconBet);		
 		}
 		moneyRem = parseInt(moneyRem) + (parseInt(moneyAmount) * multiplyer);			
 		var restart = resetValues();
-		var date = new Date();
-		date.setTime(date.getTime()+(365*24*60*60*1000));
-		document.cookie = "money=" + encodeURIComponent(moneyRem) + "; expires=" + date.toUTCString();
+		updateCookieBankRoll(moneyRem);
 		_$('betinput').value="";
 		location.reload();
 		moneyAmount = 0;			
+}
+
+function updateCookieBankRoll(money){
+	var futureDate = new Date();
+	futureDate.setFullYear(futureDate.getFullYear() + 1);
+	document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + futureDate.toUTCString();
 }
 
 

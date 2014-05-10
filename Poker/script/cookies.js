@@ -55,10 +55,15 @@ document.cookie = "firstName=" + encodeURIComponent(firstName) + "; expires=" + 
 document.cookie = "lastName=" + encodeURIComponent(lastName) + "; expires=" + date.toUTCString();
 document.cookie = "phoneNumber=" + encodeURIComponent(phoneNumber) + "; expires=" + date.toUTCString();
 document.cookie = "postalCode=" + encodeURIComponent(postalCode) + "; expires=" + date.toUTCString();
-document.cookie = "money=" + encodeURIComponent(money) + "; expires=" + date.toUTCString();
+document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + date.toUTCString();
 document.cookie = "lastVisit=" + encodeURIComponent(nameMonth[theDate.getMonth()] + " " + theDate.getDate() + 
 	", " + theDate.getFullYear()) + "; expires=" + date.toUTCString();	
 	
+}
+function updateCookieBankRoll(money){
+	var futureDate = new Date();
+	futureDate.setFullYear(futureDate.getFullYear() + 1);
+	document.cookie = "availableMoney=" + encodeURIComponent(money) + "; expires=" + futureDate.toUTCString();
 }
 
 function getCookie(cname)
