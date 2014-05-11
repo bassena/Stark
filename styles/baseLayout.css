@@ -13,6 +13,7 @@ body{
 
 a{
 	color: #09F;
+	text-decoration:none;
 }
 
 #header{
@@ -71,4 +72,8 @@ a{
 
 #cw{
 	padding-top:1em;
+}
+
+#mobile{
+	display:none;
 }

@@ -2,3 +2,22 @@
 	font-size: 200% !important;
 	line-height:2em;
 }
+
+#cw{
+	padding-top: 0.1em;
+}
+
+#gameSelector{
+	display: none;
+}
+
+#mobile{
+	display:block;
+}
+
+#moneyDiv{
+	font-size: 200%;
+	padding-top:0.5em;
+	margin-right: 0.5em;
+	float:right;
+}

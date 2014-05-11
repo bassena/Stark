@@ -10,7 +10,7 @@
 <!-- TemplateBeginEditable name="css" -->
 <link rel="stylesheet" href="../styles/baseLayout.css" />
 
-<link rel='stylesheet' media='screen and (max-width: 800px)' href='../styles/baseLayout_tablet.css' />
+<link rel='stylesheet' media='handheld, only screen and (max-width: 800px), only screen and (max-device-width: 800px)' href='../styles/baseLayout_tablet.css' />
 
 <link rel='stylesheet' media='screen and (max-width: 480px)' href="../styles/baseLayout_mobile.css" />
 
@@ -49,6 +49,6 @@
 <!-- TemplateBeginEditable name="content"-->
 <div id="content">put ur fuckin game here</div>
 <!-- TemplateEndEditable -->
-<div id="footer"><div id="cw">&copy; Stark House Casino, 2014</div></div>
+<div id="footer"><div id="cw">&copy; Stark House Casino, 2014</div><div id="mobile"><a href="../Roulette/roulette.html">Roulette</a> | <a href="../Poker/poker.html">Poker</a> | <a href="../BlackJack/blackjack.html">Blackjack</a> | <a href="../Slot/slot.html">Slots</a></div></div>
 </body>
 </html>
