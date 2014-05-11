@@ -1,4 +1,46 @@
+#gameChoices {
+	margin-top:30% !important;
+	width:2em;
+	margin-left: auto;
+    margin-right: auto;
+}
+
 #moneyDiv{
 	float:right;
 	margin-right:0.5em;
+}
+
+.choices-td {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding-left:1em;
+    height: 3em !important;
+    width: 6em !important;
+}
+
+#blkjk img{
+	padding-top:0.3em;
+	margin-left:-0.5em;
+	margin-right:0.5em;
+	width: 196.5px;
+	height:52.5px;
+}
+
+#poker img{
+	padding-top:0.3em;
+	margin-left:-0.3em;
+	margin-right:0.5em;
+	width: 133.5px;
+	height:44.25px;
+}
+
+#roulette img{
+	padding-top:0.3em;
+	width: 189px;
+	height:45px;
+}
+
+#slots img{
+	padding-top:0.3em;
+	width: 120px;
+	height:48.75px;
 }
