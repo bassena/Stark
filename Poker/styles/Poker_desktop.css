@@ -60,17 +60,16 @@ left: -34px;
 		left:138px;
 	}			
 #cardContainer{ position:relative;
-				top: 230px;				
+				top: 200px;				
 				}
 #buttonsGroup{position:relative;
-				top: 180px;}
-#remMon{
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 4em;
-	text-align: center;
-	color: #3F0;
-	top:-180px; 
-	left:600px;
-	 z-index: 2;
-	position: relative; 
-	}
+				top: 160px;}
+#statement{
+		width:100%;
+		height:100%;
+		position:relative;
+		font-size:2em; 
+		z-index: 2; 
+		left:-20px;
+		top:0px;
+		}

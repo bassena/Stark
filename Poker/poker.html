@@ -19,8 +19,9 @@
 
 <link rel='stylesheet' media='screen and (max-width: 480px)' href="../styles/baseLayout_mobile.css" />
 
+<link rel='stylesheet' media='screen and (max-width: 480px)' href="styles/Poker_mobile.css" />
 
-<link media="Screen" href="styles/goldcasino.css"  rel="stylesheet" type="text/css">
+<link media="Screen" href="styles/Poker_desktop.css"  rel="stylesheet" type="text/css">
 
 
 <!-- InstanceEndEditable -->
@@ -30,7 +31,7 @@
     <script type="text/javascript" src="../scripts/templateScripts.js">
 	</script>
 <!-- InstanceBeginEditable name="scripts" -->
-<script type="text/javascript" src="script/videoPoker.js"></script>
+<script type="text/javascript" src="script/Poker.js"></script>
     
 <!-- InstanceEndEditable -->
 
@@ -62,11 +63,9 @@
 
 <input id="btnDeal" type="button" value="Deal" onclick="dealCards();">
 			<div id="cardContainer">
-            <div id="statement" style="font-size:3em; z-index: 2; color:#FFF; background-color:#0F0;opacity:0">
-      </div>
-           
-
-</div>
+            <div id="statement" style="font-size:3em; color:#FFF; background-color:#0F0;opacity:0">
+      		</div>
+			</div>
 			   <div id="allCards"> 
                 <img src="images/cards/b2fv.gif" alt="Card deck"  id="cardDeck"/>
                 <img src="images/cards/b2fv.gif" id="card5" onclick="swapCard('card5');"/>
