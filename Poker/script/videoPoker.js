@@ -117,6 +117,7 @@ function dealCards()
 
 function swapCard(cards) 
 {
+	
 	_$(cards).src="images/cards/b2fv.gif";
 }
 

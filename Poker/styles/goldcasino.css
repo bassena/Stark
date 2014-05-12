@@ -6,65 +6,35 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-}
-
-#helpLink{
-	font-size: 1em;
-	text-decoration: underline;	
-	left:0px;
-	}
-				
+}				
 .content {
 width: 100%;
 }
-
 .label {			
 text-align: right;
 width:200px;
 float: left;
 }
-.Textbox {
-float: left;
-}	
+.Textbox {float: left;}	
 .btnsubmit{
 	position:relative;
 	left:170px;
 }	
-
 #sth{color:#FF0;}
 #sth2{color:#FF0;}
-	
-	#myMobile{
-display:none;}
-
-			h1{
-	color: #FF0;
-	font-size: 2em;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;}
-
-		#game{
+#game{
 	position: relative; 
 	width: 90%; 
 	height: 350px; 
  	margin: auto;	
     }			
-	
-
 #buttons {
 	position:relative;
 	width:500px;
 	margin:auto;
 	text-align:center;
 	color: #FF0;
-}
-
-.cardfields{
-	
-	margin-top:10px;
-	margin-bottom:10px;}
-	
+}	
 #allCards{
 	position:relative;
 	top:260px;
@@ -73,34 +43,26 @@ display:none;}
 #card1, #card2, #card3, #card4, #card5, #cardDeck { position:relative;
 width:5em;
 }
-
 #cardDeck { left:220px;
 			}	
 #card1 { left: 45px;
 top:-111px;
 	}	
-#card2 {left: -120px;
-
-	
+#card2 {left: -120px;	
 	}
 #card3 {
 left: -34px;
-
 	}
 #card4 {
 		left:53px;
-
 	}
 #card5 {
 		left:138px;
-
-	}
-			
+	}			
 #cardContainer{ position:relative;
-				top: 230px;
-				
+				top: 230px;				
 				}
-	#buttonsGroup{position:relative;
+#buttonsGroup{position:relative;
 				top: 180px;}
 #remMon{
 	font-family: Georgia, "Times New Roman", Times, serif;
