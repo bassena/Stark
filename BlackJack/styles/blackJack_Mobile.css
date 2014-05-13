@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.containerDiv {
+   font-family: Verdana,Geneva,sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    height: auto;
+    margin-left: 0.5%;
+    margin-right: auto;
+    position: absolute;
+    top: 32%;
+    width: auto;
+}
+
+.cardDivs {
+	width: 6em;
+	height: 8em;
+	background-color: rgba(0,0,0,0.40);
+	position: abosulute;
+}
+
+#gameControls {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#txtBet {
+	position: relative;
+	margin-right: auto;
+	margin-left: 38%;
+}
+
+#gameTable {
+	position: relative;
+    border: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.textFieldFormat {
+	text-align: right;
+	color: #FF0;
+}
+
+.textBoxFormat {
+	text-align: left;
+}
+
+#gameHeader {
+	width: 15%;
+	background-color: rgba(0,0,0,0.50);
+	-o-border-radius: 25px;
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+}
+
+.centerCards {
+	left: 7px;
+    position: relative;
+    top: 6%;
+}
+
+#result {
+	display: none;
+    font-size: 3em;
+    left: 41%;
+    position: absolute;
+    top: -66%;
+    width: 40%;
+}
+
+
