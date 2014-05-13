@@ -259,7 +259,8 @@ $(document).ready(function() {
     function printResult() {
         var res;
 		var rewardType;
-		var amount = parseInt($("betInput").value);
+		var startingAmount;
+		var amount = parseInt($("#betInput").val());
         if(win1[a.pos] === win2[b.pos] && win1[a.pos] === win3[c.pos]) {
             res = "You Win!";
 			rewardType = win1[a.pos];
@@ -278,9 +279,10 @@ $(document).ready(function() {
 		amountBet = val;
 		startingAmount -= parseInt(amountBet);
 		updateCookieBankRoll(startingAmount);
-		$('#moneyDiv').html('$'+startingAmount);		
+		$('#moneyDiv').html('$'+startingAmount);
+		losingMoney();
 		
-	}
+	} // loose()
 	
 	function calculateMoney(val) {
 		moneyAmt = $("moneyDiv");
@@ -292,45 +294,52 @@ $(document).ready(function() {
 			startingAmount += amountBet * 7;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 2:
 			startingAmount += amountBet * 5;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 3:
 			startingAmount += amountBet * 6;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 4:
 			startingAmount += amountBet * 4;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 5:
 			startingAmount += amountBet * 3;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 6:
 			startingAmount += amountBet * 2;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			case 7:
 			startingAmount += amountBet;
 			updateCookieBankRoll(startingAmount);
 			$('#moneyDiv').html('$'+startingAmount);
+			flashMoney();
 			break;
 			default: 
 			alert("Error, try again.");
 			break;
-		}
+		} // switch()
 		
 			
 	
-	}
+	} // calculateMoney()
 
     //create slot objects
     var a = new Slot('#slot1', 35, 1),
