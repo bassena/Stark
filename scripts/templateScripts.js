@@ -47,9 +47,10 @@ function initCookieValues(){
 				futureDate.setFullYear(futureDate.getFullYear() + 1);
 				
 				var curDate = new Date();
+				
 				var monthNames = [ "January", "February", "March", "April", "May", "June",
     				"July", "August", "September", "October", "November", "December" ];
-				document.cookie = "lastVisit=" + encodeURIComponent(monthNames[curDate.getMonth()] + " " + curDate.getDate() + ", " + curDate.getFullYear())  					+ "; expires=" + futureDate.toUTCString();
+				document.cookie = "lastVisit=" + encodeURIComponent(monthNames[curDate.getMonth()] + " " + curDate.getDate() + ", " + curDate.getFullYear()) + "; expires=" + futureDate.toUTCString();
 				break;
 			
 			default:

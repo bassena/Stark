@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    /**
-    * Global variables
-    */
+	
+     //Global variables
+    var iniAmount;
     var completed = 0,
-        imgHeight = 1368,
-        posArr 	  = [
+        imgHeight = 1368;
+    var posArr 	  = [
 			 0, //CS logo
             76, //number 7 
             152, //star
@@ -146,10 +146,7 @@ $(document).ready(function() {
         $(el).spStop();
     }
 
-    /**
-    * @method start
-    * Starts a slot
-    */
+    // start method. Starts slots animation.
     Slot.prototype.start = function() {
         var _this = this;
 		
@@ -168,10 +165,7 @@ $(document).ready(function() {
         }, 100); // window.setInterval()
     }; // Slot.prototype.start = function()
 
-    /**
-    * @method stop
-    * Stops a slot
-    */
+    // stop method. Stops slots 
     Slot.prototype.stop = function() {
         var _this = this,
             limit = 30;
@@ -197,10 +191,7 @@ $(document).ready(function() {
         }, 100);
     }; // Slot.prototype.stop = function()
 
-    /**
-    * @method finalPos
-    * Finds the final position of the slot
-    */
+    // finalPos method.  Finds final position for each slot 
     Slot.prototype.finalPos = function() {
         var el = this.el,
             el_id,
@@ -224,15 +215,15 @@ $(document).ready(function() {
                         posMin = k - pos;
                         best = k;
 						if(this.el === "#slot1")
-							this.pos = posArr[i]; //update the final position of the slot
+							this.pos = posArr[i];  // update the final position of the slot
 						if(this.el === "#slot2")
-							this.pos = posArr2[i]; //update the final position of the slot
+							this.pos = posArr2[i]; // update the final position of the slot
 						if(this.el === "#slot3")
-							this.pos = posArr3[i]; //update the final position of the slot
-                    } //if()
+							this.pos = posArr3[i]; // update the final position of the slot
+                    } //if((k - pos) < posMin)
                     break;
-                } //if()
-            } //for()
+                } //if(k > pos)
+            } //for(j = 0;;j++)
         } //for()
 
         best += imgHeight + 4;
@@ -247,10 +238,7 @@ $(document).ready(function() {
         });
     }; // Slot.prototype.finalPos = function()
     
-    /**
-    * @method reset
-    * Reset a slot to initial state
-    */
+    // reset method. Resets slots to initial state.
     Slot.prototype.reset = function() {
         var el_id = $(this.el).attr('id');
         $._spritely.instances[el_id].t = 0;
@@ -276,10 +264,35 @@ $(document).ready(function() {
             res = "You Lose";
         }
         $('#result').html(res);
+		
     }// printResult()
 	
-	function calculateMoney() {
-		var bet;
+	function calculateMoney(val) {
+		moneyAmt = $("moneyDiv");
+		moneyAmt.innerHTML = startingAmount;
+		amountBet = val;
+		
+		switch(win) {
+			case 1:
+			startingAmount += (parseInt(amountBet) * 7);
+			break;
+			case 2:
+			startingAmount += (parseInt(amountBet) * 5);
+			break;
+			case 3:
+			startingAmount += (parseInt(amountBet) * 6);
+			break;
+			case 4:
+			startingAmount += (parseInt(amountBet) * 4);
+			break;
+			case 5:
+			startingAmount += (parseInt(amountBet) * 3);
+			break;
+			case 6:
+			startingAmount += (parseInt(amountBet) * 3);
+			
+		
+		}
 			
 	
 	}
@@ -289,9 +302,9 @@ $(document).ready(function() {
         b = new Slot('#slot2', 50, 2),
         c = new Slot('#slot3', 70, 3);
 
-    /**
-    * Slot machine controller
-    */
+    
+     // Slot machine controller
+    
     $('#control').click(function() {
         var x;
 		var y;
@@ -326,4 +339,13 @@ $(document).ready(function() {
             this.innerHTML = "Start";
         }
     });	
-});
+	
+	
+	
+	function updateCookieBankRoll(bRoll){
+	var futureDate = new Date();
+	futureDate.setFullYear(futureDate.getFullYear() + 1);
+	document.cookie = "availableMoney=" + encodeURIComponent(bRoll) + "; expires=" + futureDate.toUTCString();
+}
+	
+	});
