@@ -258,41 +258,76 @@ $(document).ready(function() {
 
     function printResult() {
         var res;
+		var rewardType;
+		var amount = parseInt($("betInput").value);
         if(win1[a.pos] === win2[b.pos] && win1[a.pos] === win3[c.pos]) {
             res = "You Win!";
+			rewardType = win1[a.pos];
+			calculateMoney(amount);
         } else {
             res = "You Lose";
+			loose(amount);
         }
         $('#result').html(res);
 		
     }// printResult()
+	
+	function loose(val) {
+		moneyAmt = $("moneyDiv");
+		moneyAmt.innerHTML = startingAmount;
+		amountBet = val;
+		startingAmount -= parseInt(amountBet);
+		updateCookieBankRoll(startingAmount);
+		$('#moneyDiv').html('$'+startingAmount);		
+		
+	}
 	
 	function calculateMoney(val) {
 		moneyAmt = $("moneyDiv");
 		moneyAmt.innerHTML = startingAmount;
 		amountBet = val;
 		
-		switch(win) {
+		switch(rewardType) {
 			case 1:
-			startingAmount += (parseInt(amountBet) * 7);
+			startingAmount += amountBet * 7;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
 			break;
 			case 2:
-			startingAmount += (parseInt(amountBet) * 5);
+			startingAmount += amountBet * 5;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
 			break;
 			case 3:
-			startingAmount += (parseInt(amountBet) * 6);
+			startingAmount += amountBet * 6;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
 			break;
 			case 4:
-			startingAmount += (parseInt(amountBet) * 4);
+			startingAmount += amountBet * 4;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
 			break;
 			case 5:
-			startingAmount += (parseInt(amountBet) * 3);
+			startingAmount += amountBet * 3;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
 			break;
 			case 6:
-			startingAmount += (parseInt(amountBet) * 3);
-			
-		
+			startingAmount += amountBet * 2;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
+			break;
+			case 7:
+			startingAmount += amountBet;
+			updateCookieBankRoll(startingAmount);
+			$('#moneyDiv').html('$'+startingAmount);
+			break;
+			default: 
+			alert("Error, try again.");
+			break;
 		}
+		
 			
 	
 	}
@@ -341,11 +376,10 @@ $(document).ready(function() {
     });	
 	
 	
-	
 	function updateCookieBankRoll(bRoll){
-	var futureDate = new Date();
-	futureDate.setFullYear(futureDate.getFullYear() + 1);
-	document.cookie = "availableMoney=" + encodeURIComponent(bRoll) + "; expires=" + futureDate.toUTCString();
-}
+		var futureDate = new Date();
+		futureDate.setFullYear(futureDate.getFullYear() + 1);
+		document.cookie = "availableMoney=" + encodeURIComponent(bRoll) + "; expires=" + futureDate.toUTCString();
+	}
 	
 	});
