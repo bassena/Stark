@@ -1,4 +1,4 @@
 Simple git repository for a school project.
 =====
 
-Stark House Casino
+Stark House Casino -- Final Project
